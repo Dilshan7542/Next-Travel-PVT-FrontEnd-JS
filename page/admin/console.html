@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../../assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/style/admin/console.css">
+    <link rel="stylesheet" href="../../assets/style/admin/console-dash.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin-Console</title>
+</head>
+<body>
+<main class="main-root">
+    <aside>
+        <main>
+            <section class="aside-up-section">
+                <section>
+                    <section>
+                        <div class="btn-aside-toggle">A</div>
+                    </section>
+                </section>
+                <section>
+                    <div></div>
+                    <h4>Hello</h4>
+                    <h3>Dilshan</h3>
+                </section>
+            </section>
+            <section class="aside-down-section">
+
+                <section>
+
+                   <button class="accordion">Dashboard</button>
+                    <div class="panel">
+                        <p onclick="navigate('BOOKING')">Bookings</p>
+                    </div>
+                    <button class="accordion">Travel</button>
+                    <div class="panel">
+                        <p onclick="navigate('TRAVEL_CATEGORY')">Travel Category</p>
+                        <p onclick="navigate('TRAVEL_AREA')">Travel Area</p>
+                    </div>
+                    <button class="accordion">Hotel</button>
+                    <div class="panel">
+                        <p onclick="navigate('HOTEL')">Manage Hotel</p>
+                    </div>
+                    <button class="accordion">Vehicle</button>
+                    <div class="panel">
+                        <p onclick="navigate('VEHICLE_CATEGORY')">Vehicle Category</p>
+                        <p onclick="navigate('VEHICLE_BRAND')">Vehicle Brand</p>
+                    </div>
+                    <button class="accordion">Guide</button>
+                    <div class="panel">
+                        <p onclick="navigate('GUIDE')">Manage Guide</p>
+                    </div>
+                    <button class="accordion">Report</button>
+                    <div class="panel">
+                        <p onclick="navigate('DALY_REPORT')">Daly Report</p>
+                        <p onclick="navigate('WEEKLY_REPORT')">Weekly Report</p>
+                        <p onclick="navigate('MONTHLY_REPORT')">Monthly Report</p>
+                    </div>
+                    <button class="accordion">Author</button>
+                    <div class="panel">
+                        <p onclick="navigate('USER')">Manage User</p>
+                    </div>
+
+                </section>
+            </section>
+        </main>
+    </aside>
+
+    <main class="main-wrapper" style="background-color: rgba(234,234,234,0.87)">
+        <header>
+            <nav>
+                <div class="btn-toggle-header">III</div>
+                <h2 id="main-header">Main Content</h2>
+                <ul>
+                    <li>logout</li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-dash mt-5">
+            <main class="main-dashboard" style="display: none;"></main>
+            <main class="main-booking" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Map</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-travel-category" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Travel Category" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Travel Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Luxury</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-travel-area" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Travel Area Name" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Travel Area Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Kandy</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-hotel" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Hotel Name" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel Email" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Hotel Star-Rate" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Hotel Address" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel Location" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel Map" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Hotel Tel" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1 ms-5" type="file"
+                                   placeholder="Add Image" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Map</th>
+                                <th scope="col">Tel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-vehicle-category" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Vehicle Category" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Category Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-vehicle-brand" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Vehicle Name" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Fee Day" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Fee Night" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="Fee 1KM" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Fuel 1KM" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number" placeholder="Seat"
+                                   aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Hotel Tel" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1 ms-5" type="file"
+                                   placeholder="Add Image" aria-label=".form-control-sm ">
+                            <select class="form-select col-4 w-25 ms-5" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Map</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-guide" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Name" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Address" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="Price" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Tel" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-2">Save Guide</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-daly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-weekly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-monthly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-user" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Name" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="email"
+                                   placeholder="Email" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Password" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Role" aria-label=".form-control-sm ">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-2">Save User</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+        </main>
+    </main>
+</main>
+<footer>
+
+</footer>
+
+
+<script src="../../assets/jQuery/jquery-3.6.3.min.js"></script>
+<script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script type="module" src="../../controller/ConsoleController.js"></script>
+<script>
+    function navigate(location) {
+        closeAllNavigate();
+        switch (location) {
+            case "DASHBOARD":
+                $(".main-dashboard").show();
+                changeHeaderName("DASHBOARD");
+                break;
+            case "BOOKING":
+                $(".main-booking").show();
+                changeHeaderName("Bookings");
+                break;
+            case "TRAVEL_CATEGORY":
+                $(".main-travel-category").show();
+                changeHeaderName("Travel Category");
+                break;
+            case "TRAVEL_AREA":
+                $(".main-travel-area").show();
+                changeHeaderName("Travel Area");
+                break;
+            case "HOTEL":
+                $(".main-hotel").show();
+                changeHeaderName("HOTEL");
+                break;
+            case "VEHICLE_CATEGORY":
+                $(".main-vehicle-category").show();
+                changeHeaderName("Vehicle Category");
+                break;
+            case "VEHICLE_BRAND":
+                $(".main-vehicle-brand").show();
+                changeHeaderName("Vehicle Brand");
+                break;
+            case "GUIDE":
+                $(".main-guide").show();
+                changeHeaderName("Manage Guide");
+                break;
+            case "DALY_REPORT":
+                $(".main-report-daly").show();
+                changeHeaderName("Report Daly");
+                break;
+            case "WEEKLY_REPORT":
+                $(".main-report-weekly").show();
+                changeHeaderName("Report Weekly");
+                break;
+            case "MONTHLY_REPORT":
+                $(".main-report-monthly").show();
+                changeHeaderName("Report Monthly");
+                break;
+            case "USER":
+                $(".main-user").show();
+                changeHeaderName("Manage User");
+                break;
+        }
+    }
+
+    function closeAllNavigate() {
+        $(".main-dash>main").hide();
+    }
+
+    function changeHeaderName(name) {
+        document.getElementById("main-header").innerText = name;
+    }
+
+    $(".btn-aside-toggle").click(function () {
+        $(".main-root>aside").hide();
+        $(".main-wrapper").css("width", "100%");
+        $(".btn-toggle-header").show();
+
+    });
+
+    $(".btn-toggle-header").click(function () {
+        $(".main-root>aside").show();
+        $(".main-wrapper").css("width", "80%");
+        $(".btn-toggle-header").hide();
+    });
+
+    var acc = document.getElementsByClassName("accordion");
+
+
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active2");
+            var panel = this.nextElementSibling;
+            if (panel.style.display==="block") {
+                panel.style.display='none';
+
+            } else {
+                panel.style.display='block';
+            }
+        });
+    }
+    $(".panel>p").click(function (){
+        $(".panel>p").removeClass("active3");
+        this.classList.add("active3");
+    });
+
+</script>
+</body>
+</html>

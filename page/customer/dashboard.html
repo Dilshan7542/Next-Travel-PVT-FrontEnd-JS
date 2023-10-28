@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        if(!sessionStorage.getItem("Authorization")){
+            location.replace("../../index.html");
+        }else {
+            var email=  sessionStorage.getItem("Authorization");
+
+        }
+    </script>
+</head>
+<body style="background: #087c41">
+<h1>USER Dashboard</h1>
+<h2></h2>
+<script src="../../assets/jQuery/jquery-3.6.3.min.js"></script>
+<script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script>
+    document.querySelector('body>h2').innerHTML = email.split(':')[0];
+</script>
+</body>
+</html>

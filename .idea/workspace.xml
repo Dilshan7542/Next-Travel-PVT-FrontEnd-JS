@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/jQuery/jquery-3.6.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/jQuery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/jQuery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/admin/console-dash.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/admin/console.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/adminPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/mainPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/AdminLoginController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/ConsoleController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Customer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next-travel-frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2XF26qiYU2BZRB4fC918ybAnsMd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project I Done/Next-Travel-PTV -FrontEnd/next-travel-frontend/assets/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\assets\img" />
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend" />
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\model" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="" />
+      <created>1698210339491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698210339491</updated>
+      <workItem from="1698210340568" duration="10335000" />
+      <workItem from="1698244984352" duration="20432000" />
+      <workItem from="1698298926121" duration="12680000" />
+      <workItem from="1698338744447" duration="20882000" />
+      <workItem from="1698437315151" duration="4474000" />
+      <workItem from="1698477258686" duration="11271000" />
+      <workItem from="1698501319594" duration="3224000" />
+      <workItem from="1698509109541" duration="6276000" />
+      <workItem from="1698525440966" duration="7014000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
