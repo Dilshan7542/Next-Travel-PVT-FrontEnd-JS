@@ -1,6 +1,6 @@
 import {Environment} from "../environment/Environment.js";
 
-export class Repository{
+export class RestApiRepo {
     constructor() {
         this.jwtToken=localStorage.getItem("Authorization");
         this.url=Environment.url;
@@ -17,7 +17,7 @@ export class Repository{
                 data:JSON.stringify(data),
                 headers:{
                     "Authorization":this.jwtToken,
-                    'X-Requested-With': 'XMLHttpRequest'
+                    'X-Requested-With': 'XMLHttpRequest',
                 },
                 success:function (data,status,resp){
                     data={

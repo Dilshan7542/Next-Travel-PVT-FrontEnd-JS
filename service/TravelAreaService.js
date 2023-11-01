@@ -1,8 +1,8 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
 
 export class TravelAreaService{
     constructor() {
-        this.travelAreaRepo=new Repository();
+        this.travelAreaRepo=new RestApiRepo();
         this.path="/travel/area";
     }
     saveTravelArea(travelArea){
@@ -14,7 +14,7 @@ export class TravelAreaService{
 
     }
     deleteTravelArea(travelAreaID){
-        return this.travelAreaRepo.delete(this.path+"?travelAreaID="+travelAreaID);
+        return this.travelAreaRepo.delete(this.path+"/"+travelAreaID);
     }
 
     loadAllTravelArea(){

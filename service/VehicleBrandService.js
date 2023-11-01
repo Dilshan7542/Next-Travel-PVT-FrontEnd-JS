@@ -1,21 +1,25 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
+import {MultipartRepo} from "../model/MultipartRepo.js";
 
 export class VehicleBrandService {
 
     constructor() {
-    this.vehicleBrandRepo=new Repository();
+    this.vehicleBrandRepo=new RestApiRepo();
+            this.vehicleMultiPartRepo=new MultipartRepo();
     this.path="/vehicle/brand";
     }
     saveVehicle(vehicle){
      return this.vehicleBrandRepo.save(this.path,vehicle);
     }
-
+    uploadVehicleImage(image,id){
+        return this.vehicleMultiPartRepo.uploadImage(this.path+"/image/"+id,image);
+    }
     updateVehicle(vehicle){
      return this.vehicleBrandRepo.update(this.path,vehicle);
 
     }
     deleteVehicle(vehicleID){
-        return this.vehicleBrandRepo.delete(this.path+"?vehicleID="+vehicleID);
+        return this.vehicleBrandRepo.delete(this.path+"/"+vehicleID);
     }
 
     loadAllVehicleWithoutImage(){

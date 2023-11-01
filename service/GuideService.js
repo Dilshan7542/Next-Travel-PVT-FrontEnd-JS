@@ -1,8 +1,8 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
 
 export class GuideService{
     constructor() {
-        this.guideRepo=new Repository();
+        this.guideRepo=new RestApiRepo();
         this.path="/guide";
     }
     saveGuide(guide){
@@ -14,7 +14,7 @@ export class GuideService{
 
     }
     deleteGuide(guideID){
-        return this.guideRepo.delete(this.path+"?guideID="+guideID);
+        return this.guideRepo.delete(this.path+"/"+guideID);
     }
 
     loadAllGuide(){

@@ -1,8 +1,8 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
 
 export class UserService{
     constructor() {
-        this.userRepo=new Repository();
+        this.userRepo=new RestApiRepo();
         this.path="/user";
     }
     saveUser(user){
@@ -20,7 +20,7 @@ export class UserService{
         return this.userRepo.searchBasicAuth(this.path+"/search/email?email="+email,email,pwd);
     }
     deleteUser(userID){
-        return this.userRepo.delete(this.path+"?userID="+userID);
+        return this.userRepo.delete(this.path+"/"+userID);
     }
 
     loadAllUser(){

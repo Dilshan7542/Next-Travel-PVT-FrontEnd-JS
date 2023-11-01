@@ -215,35 +215,36 @@
                     <section class="row hotel-up-section container-fluid w-100">
                         <section class="row ms-5 ">
                             <input class="form-control form-control-sm col-4 w-25" type="text"
-                                   placeholder="Hotel ID" aria-label=".form-control-sm" id="hotelID" disabled>
-                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel ID" aria-label=".form-control-sm" id="hotelID" disabled hidden="hidden">
+                            <input class="form-control form-control-sm col-4 w-25" type="text"
                                    placeholder="Hotel Name" aria-label=".form-control-sm" id="hotelName">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
                                    placeholder="Hotel Email" aria-label=".form-control-sm" id="hotelEmail">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Hotel Star-Rate" aria-label=".form-control-sm" id="hotelStarRate">
                         </section>
                         <section class="row  ms-5 mt-4">
-                            <input class="form-control form-control-sm col-4 w-25 " type="number"
-                                   placeholder="Hotel Star-Rate" aria-label=".form-control-sm" id="hotelStarRate">
-                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                            <input class="form-control form-control-sm col-4 w-25 " type="text"
                                    placeholder="Hotel Location" aria-label=".form-control-sm" id="hotelLocation">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
                                    placeholder="Hotel Map" aria-label=".form-control-sm" id="hotelMap">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5 " type="number"
+                                   placeholder="Option 1" aria-label=".form-control-sm" id="hotelOption1">
                         </section>
                         <section class="row  ms-5 mt-4">
-                            <input class="form-control form-control-sm col-4 w-25 me-1 " type="number"
-                                   placeholder="Option 1" aria-label=".form-control-sm" id="hotelOption1">
-                            <input class="form-control form-control-sm col-4 w-25  ms-5" type="number"
+                            <input class="form-control form-control-sm col-4 w-25  " type="number"
                                    placeholder="Option 2" aria-label=".form-control-sm" id="hotelOption2">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
                                    placeholder="Option 3" aria-label=".form-control-sm " id="hotelOption3">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Option 4" aria-label=".form-control-sm" id="hotelOption4">
                         </section>
                         <section class="row mt-4 ms-5">
-                            <input class="form-control form-control-sm col-4 w-25 " type="number"
-                                   placeholder="Option 4" aria-label=".form-control-sm" id="hotelOption4">
-                            <input class="form-control form-control-sm col-4 w-25  ms-5" type="text"
+                            <input class="form-control form-control-sm col-4 w-25  " type="text"
                                    placeholder="Hotel Tel" aria-label=".form-control-sm" id="hotelTel">
                             <input class="form-control form-control-sm col-4 w-25  ms-5" type="file"
-                                   placeholder="Add Image" aria-label=".form-control-sm" id="hotelImage">
+                                   placeholder="Add Image" aria-label=".form-control-sm" id="hotelImage" multiple="multiple">
+                            <button class="btn btn-success btn-sm col-1 fw-bold" id="btnImageUploadHotel" disabled>upload</button>
                         </section>
                         <section class="row  mt-4 ms-5">
                             <button class="btn btn-primary col-1 fw-bold" id="btnHotelSave">Save</button>
@@ -321,29 +322,26 @@
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
                                    placeholder="Fee Day" aria-label=".form-control-sm " id="vehicleFeeDay">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
-                                   placeholder="Fee Night" aria-label=".form-control-sm " id="vehicleFeeNight">
+                                   placeholder="Fee 1KM" aria-label=".form-control-sm " id="vehicleFee1KM">
                         </section>
                         <section class="row  ms-5 mt-4">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
-                                   placeholder="Fee 1KM" aria-label=".form-control-sm " id="vehicleFee1KM">
-                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
                                    placeholder="Fuel 1KM" aria-label=".form-control-sm " id="vehicleFuel1KM">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="number" placeholder="Seat"
                                    aria-label=".form-control-sm " id="vehicleSeat">
+                            <select class="form-select col-4 w-25 ms-5" aria-label="Default select example" id="vehicleCategoryOption">
+                                <option selected value="1">Vehicle Category</option>
+                            </select>
                         </section>
                         <section class="row mt-4 ms-5">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="file"
-                                   placeholder="Add Image" aria-label=".form-control-sm " id="vehicleImage">
-                            <select class="form-select col-4 w-25 ms-5" aria-label="Default select example" id="vehicleCategoryOption">
-                                <option selected>Vehicle Category</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                                   placeholder="Add Image" aria-label=".form-control-sm " id="vehicleImage" name="file">
+                            <button class="btn btn-success btn-sm col-1 fw-bold" id="btnImageUploadVehicle" disabled>upload</button>
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-1" id="btnSaveVehicle">Save</button>
+                            <button class="btn btn-primary col-1 fw-bold" id="btnSaveVehicle">Save</button>
                         </section>
+
                     </section>
                     <hr>
                     <section class="vehicle-down-section">
@@ -352,8 +350,7 @@
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Fee Day</th>
-                                <th scope="col">Fee Night</th>
+                                <th scope="col">Fee 1Day</th>
                                 <th scope="col">Fee 1KM</th>
                                 <th scope="col">Fuel 1KM</th>
                                 <th scope="col">Seat</th>

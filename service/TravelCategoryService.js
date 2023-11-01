@@ -1,8 +1,8 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
 
 export class TravelCategoryService {
     constructor() {
-        this.travelCategoryRepo=new Repository();
+        this.travelCategoryRepo=new RestApiRepo();
         this.path="/travel/category";
     }
     saveTravelCategory(travelCategory){
@@ -14,7 +14,7 @@ export class TravelCategoryService {
 
     }
     deleteTravelCategory(travelCategoryID){
-        return this.travelCategoryRepo.delete(this.path+"?travelCategoryID="+travelCategoryID);
+        return this.travelCategoryRepo.delete(this.path+"/"+travelCategoryID);
     }
 
     loadAllTravelCategory(){

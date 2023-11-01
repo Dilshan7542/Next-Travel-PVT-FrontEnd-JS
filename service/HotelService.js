@@ -1,11 +1,13 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
+import {MultipartRepo} from "../model/MultipartRepo.js";
 
 
 export class HotelService{
 
 
     constructor() {
-        this.hotelRepo = new Repository();
+        this.hotelRepo = new RestApiRepo();
+        this.hotelMultipartRepo = new MultipartRepo();
         this.path="/hotel";
 
     }
@@ -13,11 +15,14 @@ export class HotelService{
        return  this.hotelRepo.save(this.path,hotel);
         }
 
+    uploadImageHotel(image,id){
+      return this.hotelMultipartRepo.uploadImage(this.path+"/image/"+id,image);
+    }
     updateHotel(hotel){
        return this.hotelRepo.update(this.path,hotel);
     }
     deleteHotel(hotelID){
-        return this.hotelRepo.delete(this.path+"?hotelID="+hotelID);
+        return this.hotelRepo.delete(this.path+"/"+hotelID);
     }
 
     loadAllHotel(){

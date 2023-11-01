@@ -1,8 +1,8 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
 
 export class VehicleCategoryService {
     constructor() {
-        this.vehicleCategoryRepo=new Repository();
+        this.vehicleCategoryRepo=new RestApiRepo();
         this.path="/vehicle/category";
     }
     saveVehicleCategory(vehicleCategory){
@@ -14,11 +14,11 @@ export class VehicleCategoryService {
 
     }
     deleteVehicleCategory(vehicleCategoryID){
-        return this.vehicleCategoryRepo.delete(this.path+"?vehicleCategoryID="+vehicleCategoryID);
+        return this.vehicleCategoryRepo.delete(this.path+"/"+vehicleCategoryID);
     }
 
-    loadAllVehicleCategory(){
-        return this.vehicleCategoryRepo.getAll(this.path);
+   async loadAllVehicleCategory(){
+        return await this.vehicleCategoryRepo.getAll(this.path);
     }
 
 }

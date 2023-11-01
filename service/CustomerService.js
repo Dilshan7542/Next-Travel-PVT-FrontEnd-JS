@@ -1,8 +1,10 @@
-import {Repository} from "../repo/Repository.js";
+import {RestApiRepo} from "../model/RestApiRepo.js";
+import {MultipartRepo} from "../model/MultipartRepo.js";
 
 export class CustomerService{
     constructor() {
-        this.customerRepo=new Repository();
+        this.customerRepo=new RestApiRepo();
+        this.customerMultipartRepo = new MultipartRepo();
         this.path="/customer";
     }
     saveCustomer(customer){
@@ -20,7 +22,7 @@ export class CustomerService{
         return this.customerRepo.searchBasicAuth(this.path+"/search/email?email="+email,email,pwd);
     }
     deleteCustomer(customerID){
-        return this.customerRepo.delete(this.path+"?customerID="+customerID);
+        return this.customerRepo.delete(this.path+"/"+customerID);
     }
 
     loadAllCustomer(){

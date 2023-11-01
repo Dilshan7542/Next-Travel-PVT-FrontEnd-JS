@@ -9,6 +9,7 @@ export class HotelController {
         this.regex = new Regex();
         //    this.loadAllFields();
         $("#btnHotelSave").click(this.saveAndUpdateHotel.bind(this));
+        $("#btnImageUploadHotel").click(this.uploadImage.bind(this));
 
     }
 
@@ -46,6 +47,12 @@ export class HotelController {
             this.clearAllFields();
             this.loadAllFields();
         }
+    }
+    uploadImage(){
+        let formData = new FormData();
+        formData.append("file", $('#hotelImage')[0].files[0]);
+        this.hotelService.uploadImageHotel(formData,$("#hotelID").val());
+
     }
 
     loadAllFields() {
@@ -101,10 +108,8 @@ export class HotelController {
                     $(row).fadeTo(1000, 1);
                     $("#tblHotel> tr>td >button").prop("disabled", true);
                     $(".aside-down-section button").prop("disabled", true);
-                    for (const elementNodeListOfElement of document.querySelectorAll(".aside-down-section p")) {
-                        elementNodeListOfElement.disa
-                    }
-                    ;
+                    $("#btnImageUploadHotel").prop("disabled", false);
+
                     isHotelUpdate = true;
                 });
 
@@ -169,6 +174,7 @@ export class HotelController {
         $("#tblHotel> tr").fadeTo(1000, 1);
         $("#tblHotel> tr>td >button").prop("disabled", false);
         $(".aside-down-section button").prop("disabled", false);
+        $("#btnImageUploadHotel").prop("disabled", true);
         $("#hotelName").val("");
         $("#hotelEmail").val("");
         $("#hotelStarRate").val("");
