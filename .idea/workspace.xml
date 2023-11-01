@@ -5,7 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="admin navigation updated">
-      <change afterPath="$PROJECT_DIR$/assets/jQuery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/HotelController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment/Environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Hotel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repo/Repository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/CustomerService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/GuideService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/HotelService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/TravelAreaService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/TravelCategoryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/UserService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/VehicleBrandService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/VehicleCategoryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/Regex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jQuery/jquery-3.6.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jQuery/jquery-3.7.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/admin/console.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/admin/console.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/admin/console.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/admin/console.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/admin/console.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/admin/console.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/adminPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/adminPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/adminPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/adminPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AdminLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AdminLoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ConsoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ConsoleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/admin/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +56,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -64,6 +98,16 @@
       <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\model" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="console.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/next-travel-frontend/page/admin/console.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.console.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +124,13 @@
       <workItem from="1698477258686" duration="11271000" />
       <workItem from="1698501319594" duration="3224000" />
       <workItem from="1698509109541" duration="6276000" />
-      <workItem from="1698525440966" duration="7397000" />
+      <workItem from="1698525440966" duration="16297000" />
+      <workItem from="1698574215136" duration="2296000" />
+      <workItem from="1698586044986" duration="20607000" />
+      <workItem from="1698649348108" duration="593000" />
+      <workItem from="1698666222069" duration="38832000" />
+      <workItem from="1698724758099" duration="5413000" />
+      <workItem from="1698759285467" duration="23209000" />
     </task>
     <task id="LOCAL-00001" summary="admin navigation updated">
       <option name="closed" value="true" />

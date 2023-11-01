@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+overflow-x: hidden;
 }
 
 .main-root {
@@ -9,12 +10,12 @@ body {
 }
 
 .main-root > aside {
-  width: 20%;
+  width: 15%;
   background: #1a1d20;
 }
 
 .main-root > .main-wrapper {
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
 
@@ -38,6 +39,9 @@ header {
       cursor: pointer;
       z-index: 2;
       display: none;
+      background-image: url("../../img/whiteIcon/menuOutline.png");
+      width: 40px;
+      height: 40px;
     }
 
     h2 {
@@ -61,6 +65,7 @@ header {
 
       li {
         cursor: pointer;
+        z-index: 10;
       }
     }
   }
@@ -103,11 +108,14 @@ header {
     height: 100%;
     position: relative;
   }
-
-  .aside-up-section > :first-child > section > div {
+  .btn-aside-toggle{
     position: absolute;
-    color: white;
-    right: 20px;
+    background-image: url("../../img/whiteIcon/collapse.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    right: 4px;
     top: 20px;
     cursor: pointer;
   }
@@ -136,16 +144,20 @@ header {
       background-size: contain;
     }
 
-    h3 {
-      margin-top: 2px;
-      padding-left: 15px;
-      margin-bottom: 0;
-    }
 
     h4 {
-      padding-top: 10px;
+      font-size: 1em;
+      padding-top: 20px;
+      margin-top: 20px;
       margin-bottom: 2px;
       padding-left: 10px;
+    }
+    h3 {
+      padding-left: 15px;
+
+      text-align: center;
+      margin-bottom: 0;
+      font-size: 1.2em;
     }
   }
 
@@ -159,7 +171,7 @@ header {
 
       .accordion {
         cursor: pointer;
-        padding: 10px;
+        padding: 5px;
         font-weight: bold;
         width: 100%;
         border: none;
@@ -195,18 +207,22 @@ header {
         background-color: #fdfdfd;
       }
 
-      .panel > p {
+      .panel > button {
         margin: 0;
         cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: start;
+        background-color: white;
         padding-left: 10px;
       }
 
-      .panel > p:hover {
-        background-color: rgb(112, 160, 206);
+      .panel > button:hover {
+        background-color: rgb(112, 160, 206) !important;
       }
 
       .active3 {
-        background-color: rgb(112, 160, 206);
+        background-color: rgb(112, 160, 206) !important;
       }
 
     }

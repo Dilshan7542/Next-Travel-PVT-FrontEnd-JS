@@ -20,4 +20,10 @@ export class Login{
     set pwd(value) {
         this._pwd = value;
     }
+    toJSON(){
+        return {
+            email:this._email,
+            pwd:this._pwd
+        }
+    }
 }
