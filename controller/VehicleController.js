@@ -1,6 +1,7 @@
 import {VehicleBrandService} from "../service/VehicleBrandService.js";
-import {VehicleCategoryService} from "../service/VehicleCategoryService.js";
 import {Regex} from "../util/Regex.js";
+import {vehicleCategoryPromise} from "../db/DB.js";
+
 
 var isVehicleControllerUpdate = false;
 
@@ -9,13 +10,14 @@ export class VehicleController {
 
     constructor() {
         this.vehicleService = new VehicleBrandService();
-        new VehicleCategoryService().loadAllVehicleCategory().then(resp => {
-            this.vehicleCategoryInMemory = resp.body;
-           this.loadAllVehicleBrand();
-            this.regex = new Regex();
-        });
+        this.vehicleCategoryInMemory=null;
+             vehicleCategoryPromise.then(resp => {
+             this.vehicleCategoryInMemory = resp.body;
+             this.regex = new Regex();
+         });
       $("#btnSaveVehicle").click(this.saveAndUpdateVehicle.bind(this));
       $("#btnImageUploadVehicle").click(this.uploadImage.bind(this));
+        $("#btnNavigateVehicle").click(this.loadAllVehicleBrand.bind(this));
 
 
     }

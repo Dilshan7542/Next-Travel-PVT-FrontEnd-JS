@@ -15,7 +15,6 @@ export class MultipartRepo{
                 enctype: 'multipart/form-data',
                 url:this.url+path,
                 credentials:true,
-                async:false,
                 processData: false,
                 data:data,
                 cache: false,

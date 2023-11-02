@@ -4,26 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="admin updated">
-      <change afterPath="$PROJECT_DIR$/model/MultipartRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="image upload">
+      <change afterPath="$PROJECT_DIR$/controller/GuideController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/TravelAreaController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/TravelCategoryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/UserController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/VehicleCategoryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/DB.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ConsoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ConsoleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/HotelController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HotelController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/VehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Customer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Hotel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/MultipartRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/MultipartRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/RestApiRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/RestApiRepo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/admin/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repo/Repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/RestApiRepo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/CustomerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/CustomerService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/GuideService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/GuideService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/HotelService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/HotelService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/TravelAreaService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/TravelAreaService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/TravelCategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/TravelCategoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/UserService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/VehicleBrandService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/VehicleBrandService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/VehicleCategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/VehicleCategoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Regex.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/Regex.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,8 @@
       <workItem from="1698724758099" duration="5413000" />
       <workItem from="1698759285467" duration="42509000" />
       <workItem from="1698840083859" duration="2196000" />
-      <workItem from="1698856407174" duration="2537000" />
+      <workItem from="1698856407174" duration="8058000" />
+      <workItem from="1698886067389" duration="32087000" />
     </task>
     <task id="LOCAL-00001" summary="admin navigation updated">
       <option name="closed" value="true" />
@@ -137,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698799355243</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="image upload">
+      <option name="closed" value="true" />
+      <created>1698861433075</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698861433075</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="admin navigation updated" />
     <MESSAGE value="admin updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin updated" />
+    <MESSAGE value="image upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="image upload" />
   </component>
 </project>

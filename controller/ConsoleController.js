@@ -1,4 +1,5 @@
 
+
 document.getElementById("userProfileName").innerText=JSON.parse(localStorage.getItem("userDetails")).name;
 function navigate(location) {
     closeAllNavigate();
@@ -13,27 +14,33 @@ function navigate(location) {
             break;
         case "TRAVEL_CATEGORY":
             $(".main-travel-category").show();
+          //  travelCategoryController.loadAllCategory();
             changeHeaderName("Travel Category");
             break;
         case "TRAVEL_AREA":
             $(".main-travel-area").show();
+         //   travelAreaController.loadAllTravel();
             changeHeaderName("Travel Area");
             break;
         case "HOTEL":
             $(".main-hotel").show();
             changeHeaderName("HOTEL");
+        //    hotelController.loadAllFields();
             break;
         case "VEHICLE_CATEGORY":
             $(".main-vehicle-category").show();
             changeHeaderName("Vehicle Category");
+        //    vehicleCategoryController.loadAllVehicleCategory();
             break;
         case "VEHICLE_BRAND":
             $(".main-vehicle-brand").show();
             changeHeaderName("Vehicle Brand");
+        //    vehicleController.loadAllVehicleBrand();
             break;
         case "GUIDE":
             $(".main-guide").show();
             changeHeaderName("Manage Guide");
+         //   guideController.loadAllGuide();
             break;
         case "DALY_REPORT":
             $(".main-report-daly").show();
@@ -50,6 +57,7 @@ function navigate(location) {
         case "USER":
             $(".main-user").show();
             changeHeaderName("Manage User");
+           // userController.loadAllUser();
             break;
     }
 }

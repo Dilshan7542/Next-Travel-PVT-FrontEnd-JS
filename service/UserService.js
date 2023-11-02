@@ -6,11 +6,11 @@ export class UserService{
         this.path="/user";
     }
     saveUser(user){
-        return this.userRepo.save(this.path,user);
+        return this.userRepo.save(this.path+"/register",user);
     }
 
     updateUser(user){
-        return this.userRepo.update(this.path,user);
+        return this.userRepo.update(this.path+"/update",user);
 
     }
     searchByEmail(email){

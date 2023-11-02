@@ -37,35 +37,35 @@
 
                    <button class="accordion">Dashboard</button>
                     <div class="panel">
-                        <button  onclick="navigate('BOOKING')">Bookings</button>
+                        <button  onclick="navigate('BOOKING')" id="btnNavigateBooking">Bookings</button>
                     </div>
                     <button class="accordion">Travel</button>
                     <div class="panel">
-                        <button  onclick="navigate('TRAVEL_CATEGORY')">Travel Category</button>
-                        <button  onclick="navigate('TRAVEL_AREA')">Travel Area</button>
+                        <button  onclick="navigate('TRAVEL_CATEGORY')" id="btnNavigateTravelCategory">Travel Category</button>
+                        <button  onclick="navigate('TRAVEL_AREA')" id="btnNavigateTravelArea">Travel Area</button>
                     </div>
                     <button class="accordion">Hotel</button>
                     <div class="panel">
-                        <button  onclick="navigate('HOTEL')">Manage Hotel</button>
+                        <button  onclick="navigate('HOTEL')" id="btnNavigateHotel">Manage Hotel</button>
                     </div>
                     <button class="accordion">Vehicle</button>
                     <div class="panel">
-                        <button  onclick="navigate('VEHICLE_CATEGORY')">Vehicle Category</button>
-                        <button  onclick="navigate('VEHICLE_BRAND')">Vehicle Brand</button>
+                        <button  onclick="navigate('VEHICLE_CATEGORY')" id="btnNavigateVehicleCategory">Vehicle Category</button>
+                        <button  onclick="navigate('VEHICLE_BRAND')" id="btnNavigateVehicle">Vehicle Brand</button>
                     </div>
                     <button class="accordion">Guide</button>
                     <div class="panel">
-                        <button  onclick="navigate('GUIDE')">Manage Guide</button>
+                        <button  onclick="navigate('GUIDE')" id="btnNavigateGuide">Manage Guide</button>
                     </div>
                     <button class="accordion">Report</button>
                     <div class="panel">
-                        <button  onclick="navigate('DALY_REPORT')">Daly Report</button>
-                        <button  onclick="navigate('WEEKLY_REPORT')">Weekly Report</button>
-                        <button  onclick="navigate('MONTHLY_REPORT')">Monthly Report</button>
+                        <button  onclick="navigate('DALY_REPORT')" id="btnNavigateDailyReport">Daly Report</button>
+                        <button  onclick="navigate('WEEKLY_REPORT')" id="btnNavigateWeeklyReport">Weekly Report</button>
+                        <button  onclick="navigate('MONTHLY_REPORT')" id="btnNavigateMonthlyReport">Monthly Report</button>
                     </div>
                     <button class="accordion">Author</button>
                     <div class="panel">
-                        <button  onclick="navigate('USER')">Manage User</button>
+                        <button  onclick="navigate('USER')" id="btnNavigateUser">Manage User</button>
                     </div>
 
                 </section>
@@ -145,30 +145,27 @@
                     <section class="hotel-up-section container-fluid w-100">
                         <section class="row   ms-5 mt-4">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="travelCategoryID">
                         </section>
                         <section class="row mt-4 ms-5">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Travel Category" aria-label=".form-control-sm ">
+                                   placeholder="Travel Category" aria-label=".form-control-sm " id="travelCategoryName">
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-1">Save</button>
+                            <button class="btn btn-primary col-1" id="btnSaveTravelCategory">Save</button>
                         </section>
                     </section>
                     <hr>
                     <section class="hotel-down-section ms-5">
                         <table class="table table-hover w-75">
-                            <thead class="table-warning">
+                            <thead class="table-dark">
                             <tr>
                                 <th scope="col">#ID</th>
-                                <th scope="col">Travel Name</th>
+                                <th scope="col">Travel Category Name</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Luxury</td>
-                            </tr>
+                            <tbody id="tblTravelCategory">
                             </tbody>
                         </table>
 
@@ -180,30 +177,27 @@
                     <section class="hotel-up-section container-fluid w-100">
                         <section class="row   ms-5 mt-4">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="travelAreaID">
                         </section>
                         <section class="row mt-4 ms-5">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Travel Area Name" aria-label=".form-control-sm ">
+                                   placeholder="Travel Area Name" aria-label=".form-control-sm " id="travelAreaName">
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-1">Save</button>
+                            <button class="btn btn-primary  col-1" id="btnSaveTravelArea">Save</button>
                         </section>
                     </section>
                     <hr>
                     <section class="hotel-down-section ms-5">
                         <table class="table table-hover w-75">
-                            <thead class="table-warning">
+                            <thead class="table-dark">
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Travel Area Name</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Kandy</td>
-                            </tr>
+                            <tbody id="tblTravelArea">
                             </tbody>
                         </table>
 
@@ -243,7 +237,7 @@
                             <input class="form-control form-control-sm col-4 w-25  " type="text"
                                    placeholder="Hotel Tel" aria-label=".form-control-sm" id="hotelTel">
                             <input class="form-control form-control-sm col-4 w-25  ms-5" type="file"
-                                   placeholder="Add Image" aria-label=".form-control-sm" id="hotelImage" multiple="multiple">
+                                   placeholder="Add Image" aria-label=".form-control-sm" id="hotelImage">
                             <button class="btn btn-success btn-sm col-1 fw-bold" id="btnImageUploadHotel" disabled>upload</button>
                         </section>
                         <section class="row  mt-4 ms-5">
@@ -281,30 +275,27 @@
                     <section class="hotel-up-section container-fluid w-100">
                         <section class="row   ms-5 mt-4">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="ID" aria-label=".form-control-sm " disabled>
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="vehicleCategoryID">
                         </section>
                         <section class="row mt-4 ms-5">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Vehicle Category" aria-label=".form-control-sm ">
+                                   placeholder="Vehicle Category" aria-label=".form-control-sm " id="vehicleCategoryName">
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-1">Save</button>
+                            <button class="btn btn-primary col-1" id="btnSaveVehicleCategory">Save</button>
                         </section>
                     </section>
                     <hr>
                     <section class="hotel-down-section ms-5">
                         <table class="table table-hover w-75">
-                            <thead class="table-warning">
+                            <thead class="table-dark">
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Category Name</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                            </tr>
+                            <tbody id="tblVehicleCategory">
                             </tbody>
                         </table>
 
@@ -369,25 +360,27 @@
                 <section>
                     <section class="hotel-up-section container-fluid w-100">
                         <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="ID" aria-label=".form-control-sm" hidden="hidden" disabled id="guideID">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Name" aria-label=".form-control-sm ">
+                                   placeholder="Name" aria-label=".form-control-sm" id="guideName">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
-                                   placeholder="Address" aria-label=".form-control-sm ">
+                                   placeholder="Address" aria-label=".form-control-sm" id="guideAddress">
                         </section>
                         <section class="row  ms-5 mt-4">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
-                                   placeholder="Price" aria-label=".form-control-sm ">
+                                   placeholder="Price" aria-label=".form-control-sm" id="guidePrice">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
-                                   placeholder="Tel" aria-label=".form-control-sm ">
+                                   placeholder="Tel" aria-label=".form-control-sm" id="guideTel">
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-2">Save Guide</button>
+                            <button class="btn btn-primary col-2" id="btnSaveGuide">Save Guide</button>
                         </section>
                     </section>
                     <hr>
                     <section class="hotel-down-section">
                         <table class="table table-hover ">
-                            <thead class="table-warning">
+                            <thead class="table-dark">
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Name</th>
@@ -396,16 +389,7 @@
                                 <th scope="col">Tel</th>
                                 <th scope="col">Action</th>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                            </tr>
-
+                            <tbody id="tblGuide">
                             </tbody>
                         </table>
 
@@ -510,42 +494,34 @@
                     <section class="hotel-up-section container-fluid w-100">
                         <section class="row ms-5 ">
                             <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Name" aria-label=".form-control-sm ">
+                                   placeholder="ID" aria-label=".form-control-sm " disabled hidden="hidden" id="userID">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Name" aria-label=".form-control-sm" id="userName">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="email"
-                                   placeholder="Email" aria-label=".form-control-sm ">
+                                   placeholder="Email" aria-label=".form-control-sm" id="userEmail">
                         </section>
                         <section class="row  ms-5 mt-4">
-                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
-                                   placeholder="Password" aria-label=".form-control-sm ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="password"
+                                   placeholder="Password" aria-label=".form-control-sm " id="userPwd">
                             <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
-                                   placeholder="Role" aria-label=".form-control-sm ">
+                                   placeholder="Role" aria-label=".form-control-sm" id="userRole">
                         </section>
                         <section class="row  mt-4 ms-5">
-                            <button class="btn btn-primary col-2">Save User</button>
+                            <button class="btn btn-primary col-2" id="btnSaveUser">Save User</button>
                         </section>
                     </section>
                     <hr>
                     <section class="hotel-down-section">
                         <table class="table table-hover ">
-                            <thead class="table-warning">
+                            <thead class="table-dark">
                             <tr>
                                 <th scope="col">#ID</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Tel</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
                                 <th scope="col">Action</th>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                            </tr>
-
+                            <tbody id="tblUser">
                             </tbody>
                         </table>
 
@@ -584,6 +560,11 @@
 <script  src="../../controller/ConsoleController.js"></script>
 <script type="module" src="../../controller/HotelController.js"></script>
 <script type="module" src="../../controller/VehicleController.js"></script>
+<script type="module" src="../../controller/VehicleCategoryController.js"></script>
+<script type="module" src="../../controller/TravelAreaController.js"></script>
+<script type="module" src="../../controller/TravelCategoryController.js"></script>
+<script type="module" src="../../controller/GuideController.js"></script>
+<script type="module" src="../../controller/UserController.js"></script>
 
 </body>
 </html>

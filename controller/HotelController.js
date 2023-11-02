@@ -7,9 +7,9 @@ export class HotelController {
     constructor() {
         this.hotelService = new HotelService();
         this.regex = new Regex();
-        //    this.loadAllFields();
         $("#btnHotelSave").click(this.saveAndUpdateHotel.bind(this));
         $("#btnImageUploadHotel").click(this.uploadImage.bind(this));
+        $("#btnNavigateHotel").click(this.loadAllFields.bind(this));
 
     }
 
@@ -50,9 +50,12 @@ export class HotelController {
     }
     uploadImage(){
         let formData = new FormData();
-        formData.append("file", $('#hotelImage')[0].files[0]);
-        this.hotelService.uploadImageHotel(formData,$("#hotelID").val());
-
+        formData.append("image", $('#hotelImage')[0].files[0]);
+        let promise = this.hotelService.uploadImageHotel(formData,$("#hotelID").val());
+        promise.then(resp => alert("UPLOADED..!!")).catch(e => alert("FAILED"));
+        isHotelUpdate=false;
+        this.clearAllFields();
+        this.loadAllFields();
     }
 
     loadAllFields() {
@@ -190,5 +193,5 @@ export class HotelController {
     }
 
 }
+let hotelController = new HotelController();
 
-var hotelController = new HotelController();

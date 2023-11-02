@@ -1,4 +1,3 @@
-
 import {CustomerService} from "../service/CustomerService.js";
 export class CustomerLoginController {
 
@@ -25,12 +24,6 @@ export class CustomerLoginController {
             "address":$("#address").val(),
             "pwd":$("#registerPassword").val(),
         }
-     /*   let customer = new Customer();
-        customer.nic=$("#nic").val();
-        customer.name=$("#name").val();
-        customer.email=$("#registerEmail").val();
-        customer.address=$("#address").val();
-        customer.pwd=$("#registerPassword").val();*/
         if(this.isValid(customer)){
             this.customerService.saveCustomer(customer);
         }
@@ -62,4 +55,3 @@ export class CustomerLoginController {
       }
     }
 }
-let customerLoginController = new CustomerLoginController();

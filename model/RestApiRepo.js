@@ -95,6 +95,7 @@ export class RestApiRepo {
             $.ajax(this.url+path,{
                 method:"GET",
                 dataType:"json",
+                contentType:"application/json",
                 async:false,
                 headers:{
                     "Authorization":this.jwtToken,
@@ -107,8 +108,6 @@ export class RestApiRepo {
                     }
                     resolve(data);
                 },
-                crossDomain: true,
-                xhrFields: { withCredentials: true },
                 error:function (er){
                     reject(er);
                 }
@@ -118,7 +117,8 @@ export class RestApiRepo {
     }
     searchBasicAuth(path,email,pwd){
         return new Promise((resolve, reject) => {
-            $.ajax(this.url+path,{
+            $.ajax({
+                url:this.url+path,
                 method:"GET",
                 dataType:"json",
                 async:false,
@@ -133,8 +133,6 @@ export class RestApiRepo {
                     }
                     resolve(data);
                 },
-                crossDomain: true,
-                xhrFields: { withCredentials: true },
                 error:function (er){
                     reject(er);
                 }
@@ -144,12 +142,15 @@ export class RestApiRepo {
     }
     getAll(path){
         return new Promise((resolve, reject) => {
-            $.ajax(this.url+path,{
+            $.ajax({
                 method:"GET",
+                url:this.url+path,
                 dataType:"json",
+                contentType:"application/json",
                 async:false,
                 headers:{
                     "Authorization":this.jwtToken,
+                    'X-Requested-With': 'XMLHttpRequest'
                 },
                 success:function (data,status,resp){
                     data={
@@ -159,8 +160,6 @@ export class RestApiRepo {
                     }
                     resolve(data);
                 },
-                crossDomain: true,
-                xhrFields: { withCredentials: true },
                 error:function (er){
                     reject(er);
                 }

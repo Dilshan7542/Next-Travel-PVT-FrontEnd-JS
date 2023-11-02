@@ -23,6 +23,6 @@ export class VehicleBrandService {
     }
 
     loadAllVehicleWithoutImage(){
-        return this.vehicleBrandRepo.getAll(this.path+"/!image");
+        return  this.vehicleBrandRepo.getAll(this.path+"/!image");
     }
 }
