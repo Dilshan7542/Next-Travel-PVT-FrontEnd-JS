@@ -77,7 +77,10 @@ export class VehicleController {
         let formData = new FormData();
         formData.append("file", $('#vehicleImage')[0].files[0]);
         this.vehicleService.uploadVehicleImage(formData,$("#vehicleID").val());
-
+        alert("Alert Saved!!");
+        this.clearAllFields();
+        this.loadAllVehicleBrand();
+        isVehicleControllerUpdate = false;
     }
 
     saveAndUpdateVehicle() {

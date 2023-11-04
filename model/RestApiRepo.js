@@ -6,6 +6,7 @@ export class RestApiRepo {
         this.url=Environment.url;
     }
     save(path,data){
+        localStorage.getItem("")
         return  new Promise((resolve, reject)=>{
             $.ajax({
                 method:"POST",
@@ -24,6 +25,7 @@ export class RestApiRepo {
                         "body":data,
                         "status":status,
                         "resp":resp,
+
                     }
                     resolve(data);
                 },

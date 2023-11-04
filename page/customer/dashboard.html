@@ -19,13 +19,14 @@
             <li><a href="#">twitter</a></li>
         </ul>
         <ul>
-            <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">Logout</a></li>
+            <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">Account</a></li>
+            <li><a type="button">Logout</a></li>
 
         </ul>
     </nav>
 </header>
 <main class="mainFragment">
-    <main class="fragment-01">
+    <main class="fragment-01" style="display: flex;">
         <div>
             <img src="../../assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
         </div>
@@ -34,17 +35,17 @@
         <div><p><a href="#">Contact</a></p></div>
         <div><p><a href="#"></a></p></div>
     </main>
-    <main class="fragment-02" style="display: block;">
+    <main class="fragment-02" style="display:flex;">
         <section>
-            <section>
-                <div>Regular</div>
-                <div>Medium</div>
-                <div>Luxury</div>
-                <div>Super-Luxury</div>
+            <section class="main-category-section">
+                <div><p>Regular</p></div>
+                <div><p>Medium</p></div>
+                <div><p>Luxury</p></div>
+                <div><p>Super-Luxury</p></div>
             </section>
         </section>
     </main>
-    <main class="fragment-03">
+    <main class="fragment-03" style="display: none;">
         <section>
             <section>
                 <section>
@@ -52,55 +53,46 @@
                     <p>Search low prices on hotels, homes and much more...</p>
                 </section>
                 <section>
-                    <section>
+                    <section class="fragment-03-main-section">
                         <aside>
-                            <select class="form-select w-100 h-100" aria-label="Default select example">
-                                <option selected>Where are you going?</option>
-                                <option value="1">Galle</option>
-                                <option value="2">Mathara</option>
-                                <option value="3">Kandy</option>
-                                <option value="3">Colombo</option>
-                                <option value="3">Hatten</option>
-                                <option value="3">Dambulle</option>
+                            <select class="form-select w-100 h-100" aria-label="Default select example" id="locationSelectBox">
                             </select>
                         </aside>
                         <aside>
                             <input type="date" class="form-control form-control-color w-100 h-100">
                         </aside>
-                        <aside>
+                        <aside class="adult-children-room-section">
                             <div class="h-100">
-                                <p>Options</p>
+                                <p><span id="adultValue">0</span> <b> Adult   </b><span id="childrenValue">0</span> <b> Children   </b>  <span id="roomValue">0</span> <b> Room</b></p>
                                 <div class="option-body">
                                     <section>
                                         <h4>Adult</h4>
                                         <aside>
-                                            <h3>-</h3>
-                                            <h4>1</h4>
-                                            <h3>+</h3>
+                                            <h3 id="adultDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="adultIncrement">+</h3>
                                         </aside>
                                     </section>
                                     <section>
                                         <h4>Children</h4>
                                         <aside>
-                                            <h3>-</h3>
-                                            <h4>1</h4>
-                                            <h3>+</h3>
+                                            <h3 id="childrenDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="childrenIncrement">+</h3>
                                         </aside>
                                     </section>
                                     <section>
                                         <h4>Rooms</h4>
                                         <aside>
-                                            <h3>-</h3>
-                                            <h4>1</h4>
-                                            <h3>+</h3>
+                                            <h3 id="roomDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="roomIncrement">+</h3>
                                         </aside>
                                     </section>
                                 </div>
                             </div>
-                            </div>
-
                         </aside>
-                        <aside>
+                        <aside class="btn-option-search">
                             <p>Search</p>
                         </aside>
                     </section>
@@ -109,44 +101,40 @@
             </section>
         </section>
     </main>
-    <main class="fragment-04">
+    <main class="fragment-04" style="display: none;">
         <section>
             <section>
                 <section>
-                    <section>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
+                    <section class="fragment-04-main-section">
+        <!--                <figure> <img src="../../assets/img/hotel/ananthara%20hotel.jpeg" alt=""><figcaption>Honda RBC</figcaption> <div><span></span></div></figure>-->
                     </section>
                 </section>
             </section>
             <section></section>
         </section>
     </main>
-    <main class="fragment-04 pt-5">
+    <main class="fragment-05 pt-5" style="display: none;">
         <section>
             <section>
                 <section>
-                    <section>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
-                        <div><div><div></div></div></div>
+                    <section class="fragment-05-main-section">
+                   <!--     <figure> <img src="../../assets/img/vehicle/susuki%20maruti.jpeg" alt=""><figcaption>Honda RBC</figcaption> <div><span></span></div></figure>-->
                     </section>
                 </section>
             </section>
             <section></section>
         </section>
     </main>
-
+<mian class="fragment-06 pt-5" style="height: 40vh;display: none">
+    <section>
+        <section class="row justify-content-sm-center">
+            <button class="btn btn-primary btn-lg w-auto fw-bold">Booking</button>
+        </section>
+    </section>
+</mian>
 </main>
-<footer>
-    <section></section>
+<footer class="mt-5">
+    <section style="width: 100vw;height: 20vh;background-color: #2a2c2f"></section>
 </footer>
 <!--MODELS-BootStrap-->
 
@@ -245,6 +233,9 @@
 <script src="../../assets/jQuery/jquery-3.7.1.min.js"></script>
 <script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 <script type="module" src="../../controller/CustomerLoginController.js"></script>
+<script type="module" src="../../controller/customer/DashboardController.js"></script>
+<script type="module" src="../../controller/customer/CategoryController.js"></script>
+<script type="module" src="../../controller/customer/BookingSearchController.js"></script>
 <script>
 
 

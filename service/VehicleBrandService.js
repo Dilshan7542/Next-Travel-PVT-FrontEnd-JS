@@ -21,6 +21,9 @@ export class VehicleBrandService {
     deleteVehicle(vehicleID){
         return this.vehicleBrandRepo.delete(this.path+"/"+vehicleID);
     }
+    findAllVehicleCategory(categoryID){
+        return this.vehicleBrandRepo.getAll(this.path+"/search/category/"+categoryID);
+    }
 
     loadAllVehicleWithoutImage(){
         return  this.vehicleBrandRepo.getAll(this.path+"/!image");

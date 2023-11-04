@@ -24,6 +24,10 @@ export class HotelService{
     deleteHotel(hotelID){
         return this.hotelRepo.delete(this.path+"/"+hotelID);
     }
+    findAllHotelLocation(location){
+
+        return this.hotelRepo.getAll(this.path+"/search/location/"+location);
+    }
 
     loadAllHotel(){
             return this.hotelRepo.getAll(this.path+"/!image");

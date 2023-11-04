@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="image upload">
-      <change afterPath="$PROJECT_DIR$/controller/GuideController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/TravelAreaController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/TravelCategoryController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/UserController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/VehicleCategoryController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/DB.js" afterDir="false" />
+    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="image upload add">
+      <change afterPath="$PROJECT_DIR$/controller/customer/BookingSearchController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/customer/CategoryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/customer/DashboardController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/BookingService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ConsoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ConsoleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HotelController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HotelController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AdminLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AdminLoginController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/VehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/MultipartRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/MultipartRepo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/RestApiRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/RestApiRepo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/admin/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/UserService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/HotelService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/HotelService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/VehicleBrandService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/VehicleBrandService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Regex.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/Regex.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,10 @@
       <workItem from="1698759285467" duration="42509000" />
       <workItem from="1698840083859" duration="2196000" />
       <workItem from="1698856407174" duration="8058000" />
-      <workItem from="1698886067389" duration="32087000" />
+      <workItem from="1698886067389" duration="43250000" />
+      <workItem from="1699013246653" duration="12910000" />
+      <workItem from="1699034000527" duration="27373000" />
+      <workItem from="1699073524233" duration="12761000" />
     </task>
     <task id="LOCAL-00001" summary="admin navigation updated">
       <option name="closed" value="true" />
@@ -146,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698861433075</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="image upload add">
+      <option name="closed" value="true" />
+      <created>1698966624323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698966624323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +161,7 @@
     <MESSAGE value="admin navigation updated" />
     <MESSAGE value="admin updated" />
     <MESSAGE value="image upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="image upload" />
+    <MESSAGE value="image upload add" />
+    <option name="LAST_COMMIT_MESSAGE" value="image upload add" />
   </component>
 </project>

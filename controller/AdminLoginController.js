@@ -15,7 +15,8 @@ export class AdminLoginController{
             localStorage.setItem("userDetails",JSON.stringify(resp.body));
             localStorage.setItem("Authorization",resp.resp.getResponseHeader("Authorization"));
             $(location).prop("href","/next-travel-frontend/page/admin/console.html");
-        })
+
+        });
     }
 }
 let adminLoginController = new AdminLoginController();
