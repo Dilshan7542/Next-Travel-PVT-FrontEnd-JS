@@ -1,14 +1,16 @@
 import {RestApiRepo} from "../model/RestApiRepo.js";
 import {MultipartRepo} from "../model/MultipartRepo.js";
+import {PermitRepo} from "../model/PermitRepo.js";
 
 export class CustomerService{
     constructor() {
         this.customerRepo=new RestApiRepo();
+        this.permitRepo = new PermitRepo();
         this.customerMultipartRepo = new MultipartRepo();
         this.path="/customer";
     }
     saveCustomer(customer){
-        return this.customerRepo.save(this.path,customer);
+        return this.permitRepo.saveCustomer(this.path+"/register",customer);
     }
 
     updateCustomer(customer){

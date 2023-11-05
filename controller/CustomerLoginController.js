@@ -1,4 +1,5 @@
 import {CustomerService} from "../service/CustomerService.js";
+
 export class CustomerLoginController {
 
     constructor() {
@@ -10,22 +11,27 @@ export class CustomerLoginController {
 
             let promise = this.customerService.searchBasicAuth($("#loginEmail").val(),$("#customerLoginPassword").val());
             promise.then(resp=>{
-                localStorage.setItem("customerDetails",resp.body);
-                localStorage.setItem("AuthCustomer",resp.resp.getResponseHeader("Authorization"));
+                localStorage.setItem("userDetails",JSON.stringify(resp.body));
+                localStorage.setItem("Authorization",resp.resp.getResponseHeader("Authorization"));
              $(location).prop("href","/next-travel-frontend/page/customer/dashboard.html");
 
             });
     }
     handleRegisterCustomer(){
+        console.log("is click");
         let customer = {
             "nic":$("#nic").val(),
             "name":$("#name").val(),
             "email":$("#registerEmail").val(),
             "address":$("#address").val(),
-            "pwd":$("#registerPassword").val(),
+            "pwd":$("#registerPassword").val()
         }
         if(this.isValid(customer)){
-            this.customerService.saveCustomer(customer);
+
+            this.customerService.saveCustomer(customer).then(resp => {
+                alert("REGISTERED");
+
+            }).catch(e => alert("ERORR..!!"));
         }
     }
 
@@ -55,3 +61,4 @@ export class CustomerLoginController {
       }
     }
 }
+let customerLoginController = new CustomerLoginController();

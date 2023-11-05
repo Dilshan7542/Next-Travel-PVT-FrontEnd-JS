@@ -23,21 +23,23 @@ export class BookingSearchController{
             alert("Please Select Location");
         }else{
             let promise = this.hotelService.findAllHotelLocation(location);
+            document.querySelector(".option-body").style.display="none";
             promise.then(resp =>{
                 $(".fragment-04-main-section").html("");
                 for (let hotel of resp.body) {
-                    $(".fragment-04-main-section").append(` <figure><i>${hotel.hotelID}</i> <img src="data:image/png;base64,${hotel.image}" alt=""><figcaption>${hotel.name}</figcaption> <div><span></span></div></figure>`);
+                    $(".fragment-04-main-section").append(` <figure><i>${JSON.stringify(hotel)}</i> <img src="data:image/png;base64,${hotel.image}" alt=""><figcaption>${hotel.name}</figcaption> <div><span></span></div></figure>`);
                     $(".fragment-04-main-section >:last-child").click(function (){
                         $(".fragment-04-main-section>figure>img").fadeTo(1000, 1);
                         $(".fragment-04-main-section span").css("background-color","rgba(52, 9, 222, 0.25)");
                         $($(this).children().eq(3).children().eq(0)).css("background-color","blue");
-                        sessionStorage.setItem("selectHotel",$(this).children().eq(0).text())
+                        sessionStorage.setItem("selectedHotel",$(this).children().eq(0).text())
                         $($(this).children().eq(1)).fadeTo("fast", 0.2);
                     });
                 }
                 $(".fragment-04").show();
                 $(".fragment-05").show();
                 $(".fragment-06").show();
+
 
             });
         }

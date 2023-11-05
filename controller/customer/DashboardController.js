@@ -8,14 +8,9 @@ import {TravelCategoryService} from "../../service/TravelCategoryService.js";
 export class DashboardController{
 
     constructor() {
-        let vehicleBrandService = new VehicleBrandService();
-        let vehicleCategoryService = new VehicleCategoryService();
-        let hotelService = new HotelService();
-        let customerService = new CustomerService();
-        let travelAreaService = new TravelAreaService();
-        let travelCategoryService = new TravelCategoryService();
-            $(".fragment-01").click(function (){
-
+            $("#btnLogout").click(function (){
+                localStorage.removeItem("Authorization");
+                $(location).prop("href","/next-travel-frontend/index.html");
             });
     }
 }

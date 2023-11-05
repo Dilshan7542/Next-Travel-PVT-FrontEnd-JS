@@ -10,7 +10,6 @@ export class VehicleController {
 
     constructor() {
         this.vehicleService = new VehicleBrandService();
-        this.vehicleCategoryInMemory=null;
              vehicleCategoryPromise.then(resp => {
              this.vehicleCategoryInMemory = resp.body;
              this.regex = new Regex();
