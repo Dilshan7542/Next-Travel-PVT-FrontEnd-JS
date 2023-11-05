@@ -102,7 +102,11 @@ this.travelService = new TravelService();
                 customer:customer
             }
 
-            this.bookingService.saveBooking(booking).then(resp => alert("BOOKED")).catch(e => alert("FAILED"));
+            this.bookingService.saveBooking(booking).then(resp => {
+                alert("BOOKED");
+                location.reload();
+
+            }).catch(e => alert("FAILED"));
         });
 
 
