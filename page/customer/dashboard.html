@@ -25,7 +25,8 @@
             <li><a href="#">twitter</a></li>
         </ul>
         <ul>
-            <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">Account</a></li>
+            <li><a type="button" data-bs-toggle="modal" data-bs-target="#bookingModel">My Booking</a></li>
+            <li><a type="button" data-bs-toggle="modal" data-bs-target="#accountModel">Account</a></li>
             <li><a type="button" style="cursor: pointer" id="btnLogout">Logout</a></li>
 
         </ul>
@@ -36,10 +37,18 @@
         <div>
             <img src="../../assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
         </div>
-        <div><p><a href="#">Home</a></p></div>
+        <div><p><a href="#" id="btnHome">Home</a></p></div>
         <div><p><a href="#">AboutUS</a></p></div>
         <div><p><a href="#">Contact</a></p></div>
         <div><p><a href="#"></a></p></div>
+    </main>
+    <main class="fragment-mainImage">
+        <section>
+            <h1>Sri Lanka</h1>
+            <h2>Find incredible things to do around the island.</h2>
+            <section></section>
+        </section>
+        </section>
     </main>
     <main class="fragment-02" style="display:flex;">
         <section>
@@ -65,7 +74,7 @@
                             </select>
                         </aside>
                         <aside>
-                            <input type="date" class="form-control form-control-color w-100 h-100">
+                            <input type="date" class="form-control form-control-color w-100 h-100" id="searchDate">
                         </aside>
                         <aside class="adult-children-room-section">
                             <div class="h-100">
@@ -228,6 +237,81 @@
 <footer class="mt-5">
     <section style="width: 100vw;height: 20vh;background-color: #2a2c2f"></section>
 </footer>
+
+ <!--Model Boostrap-->
+
+<aside>
+ <!--ACCOUNT MODEL-->
+    <section>
+        <div class="modal fade" id="accountModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="accountModelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> <!--model-body-->
+                        <section id="accountModelSection">
+                            <p><span>NIC</span> <span>Dilshan</span><input type="text" id="customerNic"><span>edit</span></p>
+                            <p><span>Name</span> <span>Dilshan</span><input type="text" id="customerName"><span>edit</span></p>
+                            <p><span>Email</span> <span>Dilshan</span><input type="text" id="customerEmail"><span></span></p>
+                            <p><span>Address</span> <span>Dilshan</span><input type="text" id="customerAddress"><span>edit</span></p>
+                            <p><span>Number</span> <span>Dilshan</span><input type="text" id="customerTel"><span>edit</span></p>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" id="btnCustomerUpdate">save</button>
+                        </section>
+
+                    </div><!-- model-body-end-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+  <!--BOOKING MODEL-->
+    <section>
+        <div class="modal fade" id="bookingModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookingModelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" >My Booking</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> <!--model-body-->
+                        <section id="bookingModelSection">
+                            <table class="table table-hover ">
+                                <thead class="table-warning">
+                                <tr>
+                                    <th scope="col">#ID</th>
+                                    <th scope="col">Hotel Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Star-Rate</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Map</th>
+                                    <th scope="col">Tel</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </section>
+
+                    </div><!-- model-body-end-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</aside>
+
 
 <script src="../../assets/jQuery/jquery-3.7.1.min.js"></script>
 <script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>

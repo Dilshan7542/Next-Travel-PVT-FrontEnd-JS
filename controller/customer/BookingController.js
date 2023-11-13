@@ -12,6 +12,13 @@ this.travelService = new TravelService();
 
     }
     bookingHandler(){
+            if(!sessionStorage.getItem("selectedVehicle")){
+                alert("Please Select Vehicle");
+                return;
+            }else if(!sessionStorage.getItem("selectedHotel")){
+                alert("Please Select Hotel");
+                return;
+            }
         this.adult = Number($("#adultValue").text());
         this.children =Number( $("#childrenValue").text());
         this.room = Number($("#roomValue").text());
@@ -21,6 +28,8 @@ this.travelService = new TravelService();
 
         this.vehicle = JSON.parse(sessionStorage.getItem("selectedVehicle"));
         this.hotel = JSON.parse(sessionStorage.getItem("selectedHotel"));
+        sessionStorage.removeItem("selectedVehicle");
+        sessionStorage.removeItem("selectedHotel");
         $("#hotelSelectSection>:first-child").html("");
         $("#hotelSelectSection>:first-child").append(`<img src="data:image/png;base64,${this.hotel.image}" alt="">`);
         $("#hotelSelectSection>:last-child>:nth-child(1)>:last-child").text(this.hotel.name);
@@ -52,24 +61,24 @@ this.travelService = new TravelService();
         $("#vehicleSelectSection>:last-child>:nth-child(6)>:last-child").text(this.vehicle.seat);
         this.calculatePrice();
         $(".fragment-02").hide();
-        $(".fragment-03").hide();
+        $(".fragment-03").show();
         $(".fragment-04").hide();
         $(".fragment-05").hide();
         $(".fragment-06").hide();
         $(".fragment-07").show();
     }
     paymentHandler(){
-        let date=new Date().toISOString().split("T")[0];
+
+        let date=new Date().toISOString().split("T")[0]; //temporary
         let time=new Date().getHours()+":"+ new Date().getMinutes();
         let customer =JSON.parse( localStorage.getItem("userDetails"));
-
-
+      const travelCategory= JSON.parse(sessionStorage.getItem("travelCategory"));
         /*not completed*/
         let travel={
-             startDate:date,
-             endDate:date,
-             countDay:1,
-             countNight:1,
+             startDate:date, // temporary
+             endDate:null, // temporary
+             countDay:0,
+             countNight:0,
              noAdults:this.adult,
              children:this.children,
              headCount:this.adult+this.children,
@@ -78,27 +87,20 @@ this.travelService = new TravelService();
              paidValue:this.totalAmount,
              remark:"",
              travelCategory:{
-                 travelCategoryID: 1
+                 travelCategoryID: travelCategory.travelCategoryID
              },
         }
-
-        this.travelService.saveTravel(travel);
-
-        let promise = this.travelService.loadAllTravel();
-        promise.then(resp=>{
-            let count=1;
-            for (let travel of resp.body) {
-                count++;
-            }
+       this.travelService.saveTravel(travel) // Save Travel
+        .then(resp=>{
             let booking={
                 date:date,
                 time:time.length===4 ? 0+time:time,
                 paidValue:this.totalAmount,
                 paymentStatus:true,
-                travelID:count,
+                travelID:resp.body.travelID,
                 hotelID:this.hotel.hotelID,
                 vehicleID:this.vehicle.vehicleID,
-                guideID:0,
+                guideID:0, // Not Ready
                 customer:customer
             }
 
@@ -106,8 +108,14 @@ this.travelService = new TravelService();
                 alert("BOOKED");
                 location.reload();
 
-            }).catch(e => alert("FAILED"));
-        });
+            }).catch(e => {
+                alert("BOOKING FAILED");
+                location.reload();
+            });
+        }).catch(e => {
+           alert("TRAVEL FAILED");
+                location.reload();
+       });
 
 
     }

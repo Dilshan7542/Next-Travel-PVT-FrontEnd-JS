@@ -438,4 +438,62 @@ main main:nth-child(1) div {
   background: rgba(52, 9, 222, 0.25);
 }
 
+#accountModelSection {
+  display: flex;
+  flex-direction: column;
+}
+#accountModelSection p {
+  display: flex;
+  justify-content: space-between;
+}
+#accountModelSection p span {
+  width: 50%;
+}
+#accountModelSection p > :first-child {
+  font-weight: bold;
+  padding-left: 10%;
+}
+#accountModelSection p > :last-child {
+  color: rgba(0, 0, 255, 0.66);
+  cursor: pointer;
+  margin-left: 5px;
+}
+#accountModelSection input {
+  border: none !important;
+  width: 50%;
+}
+#accountModelSection p > :last-child:hover {
+  text-decoration: underline blue;
+}
+#accountModelSection button {
+  display: none;
+  width: fit-content;
+  align-self: end;
+  margin-right: 25%;
+}
+#accountModelSection input:focus {
+  background-color: rgba(128, 128, 128, 0.34);
+  outline: 0;
+}
+
+.fragment-mainImage {
+  background-image: url("../../img/backfound1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 10px black;
+}
+.fragment-mainImage section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.fragment-mainImage section section {
+  height: 100px;
+}
+
 /*# sourceMappingURL=dashboard.css.map */

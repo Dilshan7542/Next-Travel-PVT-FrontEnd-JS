@@ -1,4 +1,6 @@
 import {CustomerService} from "../service/CustomerService.js";
+import {Regex} from "../util/Regex.js";
+
 
 export class CustomerLoginController {
 
@@ -31,19 +33,17 @@ export class CustomerLoginController {
             this.customerService.saveCustomer(customer).then(resp => {
                 alert("REGISTERED");
 
-            }).catch(e => alert("ERORR..!!"));
+            }).catch(e => alert("ERROR..!!"));
         }
     }
 
     isValid(customer) {
-        const nic=/^([0-9]{9}[x|X|v|V]|[0-9]{12})$/;
-        const  name=/^([A-z]){2,}$/;
-        const email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if(!nic.test(customer.nic)){
+       let regex = new Regex();
+      if(!regex.nicTest(customer.nic)){
           alert("invalid NIC")
           return null;
       }else{
-        if(!name.test(customer.name)){
+        if(!regex.nameTest(customer.name)){
           alert("invalid Name")
             return null;
         }else {
@@ -51,7 +51,7 @@ export class CustomerLoginController {
           alert("invalid PWd")
                 return null;
             }else {
-                if(!email.test(customer.email)){
+                if(!regex.emailTest(customer.email)){
                     return null;
                 }else {
               return customer;

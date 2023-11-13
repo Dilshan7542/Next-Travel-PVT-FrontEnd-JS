@@ -1,7 +1,7 @@
 export class Regex{
 
     constructor() {
-        this.nic=/^([0-9]{9}[x|X|v|V]|[0-9]{12})$/;
+        this.nic=/^^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
         this.name=/^([A-Z]){1}([a-z]){2,}$/;
         this.email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         this.integer=/^([+]?[1-9]\d*|0)$/;

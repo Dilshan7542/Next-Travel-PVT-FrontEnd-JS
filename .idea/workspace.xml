@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="customer update">
-      <change afterPath="$PROJECT_DIR$/assets/style/customer/fragment-07.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/customer/BookingController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/PermitRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/TravelService.js" afterDir="false" />
+    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="update booking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/VehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/customer/BookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/BookingController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/BookingSearchController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/BookingSearchController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/CategoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/CategoryController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/DashboardController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/DashboardController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/admin/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/CustomerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/CustomerService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Regex.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/Regex.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +68,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project I Done/Next-Travel-PTV -FrontEnd/next-travel-frontend/assets/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WORK Lectures/SANU/GDSE 57-58/Spring-Framework/AAD_SPRING&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -119,7 +127,15 @@
       <workItem from="1699013246653" duration="12910000" />
       <workItem from="1699034000527" duration="27373000" />
       <workItem from="1699073524233" duration="12900000" />
-      <workItem from="1699109975527" duration="26932000" />
+      <workItem from="1699109975527" duration="27988000" />
+      <workItem from="1699617972703" duration="1662000" />
+      <workItem from="1699627201896" duration="6322000" />
+      <workItem from="1699669511487" duration="8309000" />
+      <workItem from="1699718177183" duration="7372000" />
+      <workItem from="1699763472335" duration="10646000" />
+      <workItem from="1699799874090" duration="6182000" />
+      <workItem from="1699847384416" duration="3401000" />
+      <workItem from="1699888922606" duration="1145000" />
     </task>
     <task id="LOCAL-00001" summary="admin navigation updated">
       <option name="closed" value="true" />
@@ -161,7 +177,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699089663830</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="customer update all">
+      <option name="closed" value="true" />
+      <created>1699142819699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699142819700</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update booking">
+      <option name="closed" value="true" />
+      <created>1699142951697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699142951697</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +205,8 @@
     <MESSAGE value="image upload" />
     <MESSAGE value="image upload add" />
     <MESSAGE value="customer update" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer update" />
+    <MESSAGE value="customer update all" />
+    <MESSAGE value="update booking" />
+    <option name="LAST_COMMIT_MESSAGE" value="update booking" />
   </component>
 </project>
