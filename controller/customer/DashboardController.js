@@ -5,14 +5,12 @@ export class DashboardController {
 
     constructor() {
         document.getElementById("searchDate").setAttribute("min", new Date().toISOString().split("T")[0]);
-        $("#btnLogout").click(function () {
-            //  localStorage.removeItem("Authorization");
-            $(location).prop("href", "../../index.html");
-        });
+
         $("#btnHome").click(function () {
             location.reload();
         });
         $("#btnCustomerUpdate").click(this.customerUpdateHandler.bind(this));
+        $("#btnMyBooking").click(this.bookingHandler.bind(this));
         this.loadCustomerDetailHandler();
     }
 
@@ -60,6 +58,9 @@ export class DashboardController {
                 alert("UPDATE FAILED");
             });
         }
+
+    }
+    bookingHandler(){
 
     }
 

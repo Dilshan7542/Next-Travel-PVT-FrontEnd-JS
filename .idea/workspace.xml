@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="update booking">
+    <list default="true" id="13307918-2577-406c-a07c-4e4e65f063f3" name="Changes" comment="change some fragment07">
+      <change afterPath="$PROJECT_DIR$/assets/style/customer/fragment-04-05.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/customer/PaidBookingController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-grid.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
@@ -16,17 +18,24 @@
       <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CustomerLoginController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/fragment-07.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/fragment-07.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/customer/fragment-07.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/customer/fragment-07.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/mainPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/mainPage.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/mainPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CustomerLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/CustomerLoginController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/BookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/BookingController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/BookingSearchController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/BookingSearchController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/CategoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/CategoryController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/customer/DashboardController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customer/DashboardController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/admin/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/console.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/customer/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Regex.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/Regex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/RestApiRepo.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/RestApiRepo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/customer/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/TravelAreaService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/TravelAreaService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/VehicleCategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/VehicleCategoryService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +93,9 @@
       <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\model" />
       <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend" />
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\controller\customer" />
+      <recent name="D:\Project I Done\Next-Travel-PTV -FrontEnd\next-travel-frontend\model" />
     </key>
   </component>
   <component name="RunManager">
@@ -135,7 +145,10 @@
       <workItem from="1699763472335" duration="10646000" />
       <workItem from="1699799874090" duration="6182000" />
       <workItem from="1699847384416" duration="3401000" />
-      <workItem from="1699888922606" duration="1145000" />
+      <workItem from="1699888922606" duration="9010000" />
+      <workItem from="1699955713553" duration="30000" />
+      <workItem from="1699970689422" duration="11640000" />
+      <workItem from="1700032934986" duration="17774000" />
     </task>
     <task id="LOCAL-00001" summary="admin navigation updated">
       <option name="closed" value="true" />
@@ -193,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699142951697</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="change some fragment">
+      <option name="closed" value="true" />
+      <created>1699890372528</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699890372528</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change some fragment07">
+      <option name="closed" value="true" />
+      <created>1699890410192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699890410192</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +236,8 @@
     <MESSAGE value="customer update" />
     <MESSAGE value="customer update all" />
     <MESSAGE value="update booking" />
-    <option name="LAST_COMMIT_MESSAGE" value="update booking" />
+    <MESSAGE value="change some fragment" />
+    <MESSAGE value="change some fragment07" />
+    <option name="LAST_COMMIT_MESSAGE" value="change some fragment07" />
   </component>
 </project>

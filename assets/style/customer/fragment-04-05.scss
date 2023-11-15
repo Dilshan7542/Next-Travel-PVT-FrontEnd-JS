@@ -1,0 +1,198 @@
+/*Fragment-04*/
+
+.fragment-04 {
+  width: 100vw;
+  display: flex;
+  z-index: 1;
+  height: fit-content;
+
+  section {
+    width: 100%;
+  }
+}
+
+.fragment-04 > section > section {
+  display: flex;
+  justify-content: center;
+
+}
+
+.fragment-04 > section > section > section {
+  width: 80%;
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.fragment-04-main-section {
+  width: 90%;
+  height: 100%;
+ padding: 5px;
+  display: grid;
+  grid-gap: 5px 5px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.fragment-04-main-section > section {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 100%;
+  flex-direction: column;
+  background: white;
+ border: black solid 2px;
+
+  div:nth-child(3){
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border:  rgb(235 235 251) solid 4px;
+  }
+}
+.fragment-04-main-section > section:hover{
+  box-shadow:0 0 5px #f00d8e;
+  transition:all 0.3s;
+}
+.fragment-04-main-section > section > :nth-child(1){
+    display: flex;
+ justify-content: space-between;
+  img{
+    width: 49%;
+    border-radius: 12px;
+  }
+}
+.fragment-04-main-section > section>section:nth-child(2)>:last-child{
+  display: none;
+}
+
+.fragment-04-main-section > section > :nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  section {
+    display: flex;
+    width: 80%;
+  justify-content: space-between;
+
+  }
+ section>:first-child{
+   width: 50%;
+    font-weight: bold;
+  }
+  section>:last-child{
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/*Fragment 05*/
+
+.fragment-05 {
+  width: 100vw;
+  display: flex;
+  z-index: 1;
+  height: fit-content;
+
+  section {
+    width: 100%;
+  }
+}
+
+.fragment-05 > section > section {
+  display: flex;
+  justify-content: center;
+
+}
+
+.fragment-05 > section > section > section {
+  width: 80%;
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.fragment-05-main-section {
+  width: 90%;
+  height: 100%;
+  padding: 5px;
+  display: grid;
+  grid-gap: 5px 5px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.fragment-05-main-section > section {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border: black solid 2px;
+
+  div:nth-child(3){
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border:  rgb(235 235 251) solid 4px;
+  }
+}
+.fragment-05-main-section > section>section:nth-child(2)>:last-child{
+  display: none;
+}
+.fragment-05-main-section > section:hover{
+  box-shadow:0 0 5px #f00d8e;
+  transition:all 0.3s;
+}
+.fragment-05-main-section > section > :nth-child(1){
+  display: flex;
+  justify-content: space-between;
+  img{
+    width: 49%;
+    border-radius: 12px;
+  }
+}
+
+.fragment-05-main-section > section > :nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  section {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+  }
+  section>:first-child{
+    width: 50%;
+    font-weight: bold;
+  }
+  section>:last-child{
+    width: 50%;
+    text-align: center;
+  }
+}

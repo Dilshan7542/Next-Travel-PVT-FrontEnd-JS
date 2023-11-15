@@ -82,29 +82,39 @@ main main:nth-child(1) div {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.fragment-02 > section h4 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
 }
 .fragment-02 > section section {
   width: 70%;
   display: flex;
   height: 70%;
+  /*  div:nth-child(1){
+        background: greenyellow;
+    }
+      div:nth-child(2){
+      background: pink;
+      }
+      div:nth-child(3){
+      background: cornflowerblue;
+      }
+      div:nth-child(4){
+        background: lightcoral;
+      }*/
 }
-.fragment-02 > section section div:nth-child(1) {
-  background: linear-gradient(to left top, #31ccda, #06da38);
-}
-.fragment-02 > section section div:nth-child(2) {
-  background: linear-gradient(to left top, #31ccda, #ff00f1);
-}
-.fragment-02 > section section div:nth-child(3) {
-  background: linear-gradient(to left top, #31ccda, blue);
-}
-.fragment-02 > section section div:nth-child(4) {
-  background: linear-gradient(to left top, #31ccda, #da0000);
+.fragment-02 > section section div {
+  background-color: #2b2b2b !important;
 }
 .fragment-02 > section section div:hover {
-  box-shadow: 0 0 10px #0e1111;
+  box-shadow: 0 0 10px #e80ae8;
   transition: all 1s;
 }
 .fragment-02 > section section div {
+  height: 40%;
   width: 100%;
   margin: 2px;
   border: black solid 1px;
@@ -246,198 +256,6 @@ main main:nth-child(1) div {
   color: white;
 }
 
-/*Fragment-04*/
-.fragment-04 {
-  width: 100%;
-  z-index: 1;
-}
-.fragment-04 section {
-  width: 100%;
-}
-
-.fragment-04 > section > section {
-  display: flex;
-  justify-content: center;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
-.fragment-04 > section > section ::-webkit-scrollbar {
-  width: 4px !important;
-}
-.fragment-04 > section > section ::-webkit-scrollbar-track {
-  background: #eeeeee !important;
-}
-.fragment-04 > section > section ::-webkit-scrollbar-thumb {
-  background: #060a1f !important;
-}
-.fragment-04 > section > section ::-webkit-scrollbar-thumb:hover {
-  background: #131a6e !important;
-}
-
-.fragment-04 > section > section > section {
-  width: 80%;
-  border: black solid 2px;
-  border-radius: 12px;
-  height: 250px;
-  overflow-x: scroll;
-}
-.fragment-04 > section > section > section section {
-  width: 120%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  background: rgba(220, 234, 231, 0.7);
-}
-.fragment-04 > section > section > section figure {
-  border-radius: 12px;
-  position: relative;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: 0;
-  height: 95%;
-  min-width: 300px;
-  cursor: pointer;
-  border: #c40095 solid 4px;
-}
-.fragment-04 > section > section > section figure i {
-  display: none;
-}
-.fragment-04 > section > section > section figure img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.fragment-04 > section > section > section figure figcaption {
-  align-self: center;
-  padding-top: 25%;
-  color: white;
-  width: 100%;
-  z-index: 10;
-  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: bold;
-}
-.fragment-04 > section > section > section figure > div {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 30px;
-  border-radius: 5px;
-  height: 30px;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fragment-04 > section > section > section figure > div span {
-  width: 20px;
-  cursor: pointer;
-  height: 20px;
-  background: rgba(52, 9, 222, 0.25);
-}
-
-/*Fragment 05*/
-.fragment-05 {
-  width: 100%;
-  z-index: 1;
-}
-.fragment-05 section {
-  width: 100%;
-}
-
-.fragment-05 > section > section {
-  display: flex;
-  justify-content: center;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
-.fragment-05 > section > section ::-webkit-scrollbar {
-  width: 4px !important;
-}
-.fragment-05 > section > section ::-webkit-scrollbar-track {
-  background: #eeeeee !important;
-}
-.fragment-05 > section > section ::-webkit-scrollbar-thumb {
-  background: #060a1f !important;
-}
-.fragment-05 > section > section ::-webkit-scrollbar-thumb:hover {
-  background: #131a6e !important;
-}
-
-.fragment-05 > section > section > section {
-  width: 80%;
-  border: black solid 2px;
-  height: 250px;
-  overflow-x: scroll;
-  border-radius: 12px;
-}
-.fragment-05 > section > section > section section {
-  width: 120%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  background: rgba(220, 234, 231, 0.7);
-}
-.fragment-05 > section > section > section figure {
-  border-radius: 12px;
-  position: relative;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: 0;
-  height: 95%;
-  min-width: 300px;
-  cursor: pointer;
-  border: blueviolet solid 4px;
-}
-.fragment-05 > section > section > section figure i {
-  display: none;
-}
-.fragment-05 > section > section > section figure img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.fragment-05 > section > section > section figure figcaption {
-  align-self: center;
-  padding-top: 25%;
-  color: white;
-  width: 100%;
-  z-index: 10;
-  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: bold;
-}
-.fragment-05 > section > section > section figure > div {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fragment-05 > section > section > section figure > div span {
-  width: 20px;
-  cursor: pointer;
-  height: 20px;
-  background: rgba(52, 9, 222, 0.25);
-}
-
 #accountModelSection {
   display: flex;
   flex-direction: column;
@@ -495,5 +313,8 @@ main main:nth-child(1) div {
 .fragment-mainImage section section {
   height: 100px;
 }
+.fragment-mainImage section h1:hover, .fragment-mainImage section h2:hover {
+  color: deeppink;
+}
 
-/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=index.css.map */

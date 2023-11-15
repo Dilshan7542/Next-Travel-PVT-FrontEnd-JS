@@ -5,90 +5,352 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Next Travel(pvt)</title>
+    <title>Customer Dashboard</title>
     <link rel="stylesheet" href="./assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style/mainPage.css">
+    <link rel="stylesheet" href="./assets/style/customer/index.css">
+    <link rel="stylesheet" href="./assets/style/customer/fragment-04-05.css">
+    <link rel="stylesheet" href="./assets/style/customer/fragment-07.css">
+
 </head>
 <body>
 
-    <header>
-        <nav>
-                <ul>
-                    <li><a href="#" >google</a></li>
-                    <li><a href="#">facebook</a></li>
-                    <li><a href="#">twitter</a></li>
-                </ul>
-               <ul>
-                   <li><a type="button" data-bs-toggle="modal" data-bs-target="#loginModel">login</a></li>
-                   <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">signup</a></li>
-               </ul>
-        </nav>
-    </header>
-    <main class="mainHeader">
-        <main class="fragment-01">
-            <div>
-                <img src="./assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
-            </div>
-            <div><p><a href="#">Home</a></p></div>
-            <div><p><a href="#">AboutUS</a></p></div>
-            <div><p><a href="#">Contact</a></p></div>
-            <div><p><a href="#">Blog</a></p></div>
-        </main>
-        <main class="fragment-02">
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul>
+            <li><a type="button" id="btnLogin"  data-bs-toggle="modal" data-bs-target="#loginModel">Login</a></li>
+            <li><a type="button" id="btnSignup" data-bs-toggle="modal" data-bs-target="#registerModel">Signup</a></li>
+            <li><a type="button" id="btnMyBooking" data-bs-toggle="modal" data-bs-target="#bookingModel" style="display: none">My Booking</a></li>
+            <li><a type="button" id="btnAccount" data-bs-toggle="modal" data-bs-target="#accountModel" style="display: none">Account</a></li>
+            <li><a type="button"  id="btnLogout" style="cursor: pointer;display: none">Logout</a></li>
+
+        </ul>
+    </nav>
+    <script>
+        if (localStorage.getItem("Authorization")) {
+            document.getElementById("btnLogin").style.display="none";
+            document.getElementById("btnSignup").style.display="none";
+            document.getElementById("btnMyBooking").style.display="block";
+            document.getElementById("btnAccount").style.display="block";
+            document.getElementById("btnLogout").style.display="block";
+        }
+    </script>
+</header>
+<main class="mainFragment">
+    <main class="fragment-01" style="display: flex;">
+        <div>
+            <img src="./assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
+        </div>
+        <div><p><a href="#" id="btnHome">Home</a></p></div>
+        <div><p><a href="#">AboutUS</a></p></div>
+        <div><p><a href="#">Contact</a></p></div>
+        <div><p><a href="#"></a></p></div>
+    </main>
+    <main class="fragment-mainImage">
+        <section>
+            <h1>Sri Lanka</h1>
+            <h2>Find incredible things to do around the island.</h2>
+            <section></section>
+        </section>
+        </section>
+    </main>
+    <main class="fragment-02" style="display:flex;">
+        <section>
+            <h4>What Category You Looking For ?</h4>
+            <section class="main-category-section">
+                <div><p>Regular</p></div>
+                <div><p>Medium</p></div>
+                <div><p>Luxury</p></div>
+                <div><p>Super-Luxury</p></div>
+            </section>
+        </section>
+    </main>
+    <main class="fragment-03" style="display: none;">
+        <section>
             <section>
-                <h1>Sri Lanka</h1>
-                <h2>Find incredible things to do around the island.</h2>
+                <section>
+                    <h4>Find your next stay</h4>
+                    <p>Search low prices on hotels, homes and much more...</p>
+                </section>
+                <section>
+                    <section class="fragment-03-main-section">
+                        <aside>
+                            <select class="form-select w-100 h-100" aria-label="Default select example" id="locationSelectBox">
+                            </select>
+                        </aside>
+                        <aside>
+                            <input type="date" class="form-control form-control-color w-100 h-100" id="searchDate">
+                        </aside>
+                        <aside class="adult-children-room-section">
+                            <div class="h-100">
+                                <p><span id="adultValue">0</span> <b> Adult   </b><span id="childrenValue">0</span> <b> Children   </b>  <span id="roomValue">0</span> <b> Room</b></p>
+                                <div class="option-body">
+                                    <section>
+                                        <h4>Adult</h4>
+                                        <aside>
+                                            <h3 id="adultDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="adultIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                    <section>
+                                        <h4>Children</h4>
+                                        <aside>
+                                            <h3 id="childrenDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="childrenIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                    <section>
+                                        <h4>Rooms</h4>
+                                        <aside>
+                                            <h3 id="roomDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="roomIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="btn-option-search">
+                            <p>Search</p>
+                        </aside>
+                    </section>
+                </section>
                 <section></section>
             </section>
-        </main>
-       <main class="fragment-03">
-           <h2>Top Destinations</h2>
-           <section>
-              <section>
-                  <div><img src="./assets/img/category/galle-fort-270x335.jpg" alt="img"><p>Galle</p></div>
-                  <div><img src="./assets/img/category/matara_1-270x335.jpg" alt="img"><p>Mathara</p></div>
-                  <div><img src="./assets/img/category/meemure-matale-270x335.jpg" alt="img"><p>Mimura</p></div>
-                  <div><img src=./assets/img/category/polonnaruwa-lanka-travel-guide-270x335.jpg alt="img"><p>Polonaruwa</p></div>
-              </section>
-           </section>
-       </main>
+        </section>
     </main>
-    <footer>
-        <section></section>
-    </footer>
-        <!--MODELS-BootStrap-->
-
-    <aside>
+    <main class="fragment-04" style="display: none;">
         <section>
-        <div class="modal fade" id="loginModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModelLabel" aria-hidden="true">
+            <section>
+                <section>
+                    <h2>Select Your Hotel</h2>
+                    <section class="fragment-04-main-section">
+
+                    </section>
+                </section>
+            </section>
+            <section></section>
+        </section>
+    </main>
+    <main class="fragment-05 pt-5" style="display: none;">
+        <section>
+            <section>
+                <section>
+                    <h2>Select Your Vehicle</h2>
+                    <section class="fragment-05-main-section">
+                    </section>
+                </section>
+            </section>
+            <section></section>
+        </section>
+    </main>
+<mian class="fragment-06 pt-5" style="height: 40vh;display: none">
+    <section>
+        <section class="row justify-content-sm-center">
+            <button class="btn btn-primary btn-lg w-auto fw-bold" id="btnBooking">Booking</button>
+        </section>
+    </section>
+</mian>
+
+    <mian class="fragment-07 pt-5" style="display: none">
+        <section>
+            <section class="fragment-07-mainSection">
+                    <section>
+                        <section><p>Adult</p><p>-1</p></section>
+                        <section><p>Children</p><p>-1</p></section>
+                        <section><p>Room</p><p>-1</p></section>
+                    </section>
+                    <section id="hotelSelectSection">
+                        <section>
+                        </section>
+                        <section>
+                            <section><p>Hotel Name </p><p>Ananthara Hotel</p></section>
+                            <section><p>Email </p><p>Ananthara@gmailcom</p></section>
+                            <section><p>Location </p><p>Kaluthara</p></section>
+                            <section><p>Star rate </p><p>5</p></section>
+                            <section><p>Tel </p><p>5</p></section>
+                            <section>
+                                <select class="form-select w-25 h-100" aria-label="Default select example" id="hotelOptionBox">
+                            </select>
+                            </section>
+                        </section>
+                    </section>
+                    <section id="vehicleSelectSection">
+                        <section>
+                            <img src="./assets/img/vehicle/susuki%20maruti.jpeg" alt="">
+                        </section>
+                        <section >
+                            <section><p>Vehicle Qty </p><p>2</p></section>
+                            <section><p>Brand Name </p><p>Honda</p></section>
+                            <section><p>Fee For Day </p><p>1000.00/p</section>
+                            <section><p>Fee for 1KM</p><p>2000.00</p></section>
+                            <section><p>Fuel for 1KM</p><p>2000.00</p></section>
+                            <section><p>Seat</p><p>4</p></section>
+                        </section>
+                    </section>
+                    <section id="travelPriceSection">
+                        <section>
+                            <section><p>Name</p><p>Amount</p><p>Total</p></section>
+                            <section><p>Hotel Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Vehicle Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Travel Charge Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Guide Price</p><p>45000.00</p> <p></p></section>
+                            <section><p style="color: red">Total</p><p>45000.00</p> <p></p></section>
+                        </section>
+                    </section>
+                    <section>
+                        <section>
+                            <section><h4>Total </h4><p id="totalAmount">15000.00</p></section>
+                            <section>
+                                <div class="form-floating mb-3 w-50">
+                                <input type="number" class="form-control" id="cardNumber" placeholder="4445 XXXX XXXX XXXX">
+                                <label for="cardNumber">Card Number</label>
+                            </div>
+                            </section>
+                            <section>
+                                <div class="form-floating mb-3 pe-5">
+                                    <input type="number" class="form-control" id="cardExpireDate" placeholder="Ex-:23/5" maxlength="5">
+                                    <label for="cardExpireDate">Expire Date</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="cardCCV" placeholder="ccv" maxlength="3">
+                                    <label for="cardCCV">CCV</label>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="form-floating mb-3 w-25">
+                                    <input type="text" class="form-control" id="cardHolderName" placeholder="Card Holder Name" >
+                                    <label for="cardHolderName">Card Holder Name</label>
+                                </div>
+                            </section>
+                            <section>
+                                <button class="btn btn-danger btn-lg" id="btnPayment">PAY</button>
+                            </section>
+                        </section>
+                    </section>
+                    <section></section>
+            </section>
+        </section>
+    </mian>
+
+
+
+
+
+</main>
+<footer class="mt-5">
+    <section style="width: 100vw;height: 20vh;background-color: #2a2c2f"></section>
+</footer>
+
+ <!--Model Boostrap-->
+
+<aside>
+ <!--ACCOUNT MODEL-->
+    <section>
+        <div class="modal fade" id="accountModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="accountModelLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Account</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body"> <!--model-body-->
+                        <section id="accountModelSection">
+                            <p><span>NIC</span> <span>Dilshan</span><input type="text" id="customerNic"><span>edit</span></p>
+                            <p><span>Name</span> <span>Dilshan</span><input type="text" id="customerName"><span>edit</span></p>
+                            <p><span>Email</span> <span>Dilshan</span><input type="text" id="customerEmail"><span></span></p>
+                            <p><span>Address</span> <span>Dilshan</span><input type="text" id="customerAddress"><span>edit</span></p>
+                            <p><span>Number</span> <span>Dilshan</span><input type="text" id="customerTel"><span>edit</span></p>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" id="btnCustomerUpdate">save</button>
+                        </section>
 
-                        <div class="mb-3 row">
-                            <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email"  class="form-control" id="loginEmail" placeholder="Enter Email">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="customerLoginPassword" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="customerLoginPassword" placeholder="Enter Password">
-                            </div>
-                        </div>
                     </div><!-- model-body-end-->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="btnCustomerLogin" data-bs-dismiss="modal">Login</button>
                     </div>
                 </div>
             </div>
         </div>
+
+    </section>
+
+  <!--BOOKING MODEL-->
+    <section>
+        <div class="modal fade" id="bookingModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookingModelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" >My Booking</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> <!--model-body-->
+                        <section id="bookingModelSection">
+                            <table class="table table-hover ">
+                                <thead class="table-warning">
+                                <tr>
+                                    <th scope="col">#ID</th>
+                                    <th scope="col">Hotel Name</th>
+                                    <th scope="col">Vehicle Name</th>
+                                    <th scope="col">Guide Name</th>
+                                    <th scope="col">Travel Area</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Paid Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </section>
+
+                    </div><!-- model-body-end-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--LOGIN AND REGISTER MODEL-->
+    <section>
+        <section>
+            <div class="modal fade" id="loginModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModelLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"> <!--model-body-->
+
+                            <div class="mb-3 row">
+                                <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email"  class="form-control" id="loginEmail" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="customerLoginPassword" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="customerLoginPassword" placeholder="Enter Password">
+                                </div>
+                            </div>
+                        </div><!-- model-body-end-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="btnCustomerLogin" data-bs-dismiss="modal">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
         <section>
@@ -102,25 +364,25 @@
                         <div class="modal-body"> <!--model-body-->
 
                             <div class="mb-3 row">
-                                <label for="loginEmail" class="col-sm-2 col-form-label">NIC</label>
+                                <label for="nic" class="col-sm-2 col-form-label">NIC</label>
                                 <div class="col-sm-10">
                                     <input type="text"  class="form-control" id="nic" placeholder="Enter NIC">
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="loginEmail" class="col-sm-2 col-form-label">Name</label>
+                                <label for="name" class="col-sm-2 col-form-label">Name</label>
                                 <div class="col-sm-10">
                                     <input type="text"  class="form-control" id="name" placeholder="Enter Name">
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="loginEmail" class="col-sm-2 col-form-label">Address</label>
+                                <label for="address" class="col-sm-2 col-form-label">Address</label>
                                 <div class="col-sm-10">
                                     <input type="text"  class="form-control" id="address" placeholder="Enter Address">
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+                                <label for="registerEmail" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
                                     <input type="email"  class="form-control" id="registerEmail" placeholder="Enter Email">
                                 </div>
@@ -146,13 +408,40 @@
                 </div>
             </div>
         </section>
+    </section>
+    <!--CONFORMATION MODAL-->
+    <section>
+        <div class="modal fade" id="bookingConformModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="bookingConformLabel">Are you sure..?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="btnBookingConformModel" data-bs-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="btnBookingConformModelShow" data-bs-toggle="modal" data-bs-target="#bookingConformModel"  hidden="hidden"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </aside>
-
+    </section>
+</aside>
 
 
 <script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
 <script src="./assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-<script type="module" src="./controller/CustomerLoginController.js"></script>
+<script type="module" src="./controller/customer/CustomerLoginController.js"></script>
+<script type="module" src="./controller/customer/DashboardController.js"></script>
+<script type="module" src="./controller/customer/CategoryController.js"></script>
+<script type="module" src="./controller/customer/BookingSearchController.js"></script>
+<script type="module" src="./controller/customer/BookingController.js"></script>
+<script type="module" src="./controller/customer/PaidBookingController.js"></script>
+<script>
+
+
+</script>
 </body>
 </html>

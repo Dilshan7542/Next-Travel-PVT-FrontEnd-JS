@@ -9,7 +9,7 @@ export class BookingSearchController {
         $(".adult-children-room-section>div>p").click(this.adultChildrenRoomHandler.bind(this));
         $(".btn-option-search").click(this.btnOptionSearchHandler.bind(this));
 
-        this.loadAllTravelArea();
+       this.loadAllTravelArea();
         this.adultChildrenRoomHandlerOptionManage();
 
     }
@@ -19,6 +19,9 @@ export class BookingSearchController {
     }
 
     btnOptionSearchHandler() {
+        $(".fragment-07").hide();
+        $(".fragment-05-main-section>section").css("border-color","black"); // if click event tow time
+        $(".fragment-05-main-section>section>:last-child").css("background-color","rgb(255,255,255)");
 
         let location = $("#locationSelectBox").val();
         let searchDate = $("#searchDate").val();
@@ -34,13 +37,27 @@ export class BookingSearchController {
             promise.then(resp => {
                 $(".fragment-04-main-section").html("");
                 for (let hotel of resp.body) {
-                    $(".fragment-04-main-section").append(` <figure><i>${JSON.stringify(hotel)}</i> <img src="data:image/png;base64,${hotel.image}" alt=""><figcaption>${hotel.name}</figcaption> <div><span></span></div></figure>`);
+                    $(".fragment-04-main-section").append(` 
+ <section>
+ <section>
+  <img src="data:image/png;base64,${hotel.image}" alt="">
+                            </section>
+                            <section>
+                                <section><p>Hotel Name</p><p>${hotel.name}</p></section>
+                                <section><p>Email </p><p>${hotel.email}</section>
+                                <section><p>Location</p><p>${hotel.location}</p></section>
+                                <section><p>Star Rate</p><p>${hotel.starRate}</p></section>
+                                <section><p>Tel</p><p>${hotel.tel}</p></section>
+                               <p>${JSON.stringify(hotel)}</p>
+                            </section>
+                            <div></div>
+                    </section>`);
                     $(".fragment-04-main-section >:last-child").click(function () {
-                        $(".fragment-04-main-section>figure>img").fadeTo(1000, 1);
-                        $(".fragment-04-main-section span").css("background-color", "rgba(52, 9, 222, 0.25)");
-                        $($(this).children().eq(3).children().eq(0)).css("background-color", "blue");
-                        sessionStorage.setItem("selectedHotel", $(this).children().eq(0).text())
-                        $($(this).children().eq(1)).fadeTo("fast", 0.2);
+                        $(".fragment-04-main-section>section").css("border-color","black");
+                        $(".fragment-04-main-section>section>:last-child").css("background-color","rgb(255,255,255)");
+                        $(this).children().eq(2).css("background-color", "#1c7ff3c2");
+                        sessionStorage.setItem("selectedHotel", $(this).children().eq(1).children().eq(5).text())
+                        $(this).css("border-color","blue");
                     });
                 }
                 $(".fragment-03").css("height", "25vh");
@@ -56,6 +73,8 @@ export class BookingSearchController {
 
     loadAllTravelArea() {
         let promise = this.travelAreaService.loadAllTravelArea();
+        sessionStorage.removeItem("selectedVehicle");
+        sessionStorage.removeItem("selectedHotel");
         promise.then(resp => {
             $("#locationSelectBox").html("");
             $("#locationSelectBox").append(` <option value="1" selected>Where are you going?</option>`);
@@ -63,7 +82,7 @@ export class BookingSearchController {
                 $("#locationSelectBox").append(`<option value="${travelArea.areaName}">${travelArea.areaName}</option>`);
             }
         }).catch(e =>{
-            console.log(e);
+            console.log(e.statusText);
             alert("Travel Area Failed");
             $(".fragment-03").hide();
         });

@@ -18,7 +18,7 @@ export class VehicleCategoryService {
     }
 
    async loadAllVehicleCategory(){
-        return await this.vehicleCategoryRepo.getAll(this.path);
+        return await this.vehicleCategoryRepo.getAll(this.path+"/all");
     }
 
 }

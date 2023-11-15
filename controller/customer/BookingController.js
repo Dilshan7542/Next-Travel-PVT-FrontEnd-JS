@@ -5,9 +5,10 @@ export class BookingController{
 
     constructor() {
 this.bookingService = new BookingService();
-this.travelService = new TravelService();
+
             $("#btnBooking").click(this.bookingHandler.bind(this));
             $("#btnPayment").click(this.paymentHandler.bind(this));
+            $("#btnBookingConformModel").click(this.paymentConformHandler.bind(this));
 
 
     }
@@ -68,56 +69,64 @@ this.travelService = new TravelService();
         $(".fragment-07").show();
     }
     paymentHandler(){
+        if (!localStorage.getItem("Authorization")) {
+            alert("Please Sign in First !!!");
+            $(window).scrollTop(0);
+            document.getElementById("btnLogin").click();
+            return;
+        }
+        document.getElementById("btnBookingConformModelShow").click();
 
+
+    }
+    paymentConformHandler(){
         let date=new Date().toISOString().split("T")[0]; //temporary
         let time=new Date().getHours()+":"+ new Date().getMinutes();
         let customer =JSON.parse( localStorage.getItem("userDetails"));
-      const travelCategory= JSON.parse(sessionStorage.getItem("travelCategory"));
+        const travelCategory= JSON.parse(sessionStorage.getItem("travelCategory"));
         /*not completed*/
         let travel={
-             startDate:date, // temporary
-             endDate:null, // temporary
-             countDay:0,
-             countNight:0,
-             noAdults:this.adult,
-             children:this.children,
-             headCount:this.adult+this.children,
-             pets:0,
-             guide:0,
-             paidValue:this.totalAmount,
-             remark:"",
-             travelCategory:{
-                 travelCategoryID: travelCategory.travelCategoryID
-             },
+            startDate:date, // temporary
+            endDate:null, // temporary
+            countDay:0,
+            countNight:0,
+            noAdults:this.adult,
+            children:this.children,
+            headCount:this.adult+this.children,
+            pets:0,
+            guide:0,
+            paidValue:this.totalAmount,
+            remark:"",
+            travelCategory:{
+                travelCategoryID: travelCategory.travelCategoryID
+            },
         }
-       this.travelService.saveTravel(travel) // Save Travel
-        .then(resp=>{
-            let booking={
-                date:date,
-                time:time.length===4 ? 0+time:time,
-                paidValue:this.totalAmount,
-                paymentStatus:true,
-                travelID:resp.body.travelID,
-                hotelID:this.hotel.hotelID,
-                vehicleID:this.vehicle.vehicleID,
-                guideID:0, // Not Ready
-                customer:customer
-            }
+        new TravelService().saveTravel(travel) // Save Travel
+            .then(resp=>{
+                let booking={
+                    date:date,
+                    time:time.length===4 ? 0+time:time,
+                    paidValue:this.totalAmount,
+                    paymentStatus:true,
+                    travelID:resp.body.travelID,
+                    hotelID:this.hotel.hotelID,
+                    vehicleID:this.vehicle.vehicleID,
+                    guideID:0, // Not Ready
+                    customer:customer
+                }
 
-            this.bookingService.saveBooking(booking).then(resp => {
-                alert("BOOKED");
-                location.reload();
+                new BookingService().saveBooking(booking).then(resp => {
+                    alert("BOOKED");
+                    location.reload();
 
+                }).catch(e => {
+                    alert("BOOKING FAILED");
+
+                });
             }).catch(e => {
-                alert("BOOKING FAILED");
-                location.reload();
-            });
-        }).catch(e => {
-           alert("TRAVEL FAILED");
-                location.reload();
-       });
-
-
+            alert("TRAVEL FAILED");
+            location.reload();
+        });
     }
     calculatePrice(){
         let vehicleAmount=this.vehicleQty*(this.vehicle.fee1Day+this.vehicle.fee1KM+this.vehicle.fuel1KM);

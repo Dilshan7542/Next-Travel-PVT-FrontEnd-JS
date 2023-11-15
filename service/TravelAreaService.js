@@ -18,6 +18,6 @@ export class TravelAreaService{
     }
 
     loadAllTravelArea(){
-        return this.travelAreaRepo.getAll(this.path);
+        return this.travelAreaRepo.getAll(this.path+"/all");
     }
 }
