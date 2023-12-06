@@ -3,7 +3,7 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class VehicleCategoryService {
     constructor() {
         this.vehicleCategoryRepo=new RestApiRepo();
-        this.path="/vehicle/category";
+        this.path="/vehicle/api/v1/vehicle/category";
     }
     saveVehicleCategory(vehicleCategory){
         return this.vehicleCategoryRepo.save(this.path,vehicleCategory);

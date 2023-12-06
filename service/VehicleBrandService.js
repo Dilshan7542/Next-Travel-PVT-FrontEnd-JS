@@ -6,7 +6,7 @@ export class VehicleBrandService {
     constructor() {
     this.vehicleBrandRepo=new RestApiRepo();
             this.vehicleMultiPartRepo=new MultipartRepo();
-    this.path="/vehicle/brand";
+    this.path="/vehicle/api/v1/vehicle/brand";
     }
     saveVehicle(vehicle){
      return this.vehicleBrandRepo.save(this.path,vehicle);

@@ -22,8 +22,9 @@ export class BookingSearchController {
         $(".fragment-07").hide();
         $(".fragment-05-main-section>section").css("border-color","black"); // if click event tow time
         $(".fragment-05-main-section>section>:last-child").css("background-color","rgb(255,255,255)");
-
         let location = $("#locationSelectBox").val();
+        sessionStorage.setItem("travelArea",location);
+
         let searchDate = $("#searchDate").val();
 
         if (location === "1") {

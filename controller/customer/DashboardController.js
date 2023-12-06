@@ -1,5 +1,6 @@
 import {Regex} from "../../util/Regex.js";
 import {CustomerService} from "../../service/CustomerService.js";
+import {BookingService} from "../../service/BookingService.js";
 
 export class DashboardController {
 
@@ -38,6 +39,7 @@ export class DashboardController {
         $("#customerEmail").val(customer.email);
         $("#customerAddress").val(customer.address);
         $("#customerTel").val(customer.tel);
+        this.bookingHandler(customer.customerID);
     }
 
     customerUpdateHandler() {
@@ -60,8 +62,25 @@ export class DashboardController {
         }
 
     }
-    bookingHandler(){
-
+    bookingHandler(customerID){
+        console.log(customerID)
+        let promise = new BookingService().searchBookingCustomerID(customerID);
+        console.log(promise);
+            promise.then(resp=>{
+        $("#tblBooking").html("");
+                for (let booking of resp.body) {
+        $("#tblBooking").append(`
+               <tr>
+                    <th scope="col">${booking.bookingID}</th>
+                    <th scope="col">${JSON.parse(booking.hotel).name}</th>
+                    <th scope="col">${JSON.parse(booking.vehicle).brandName}</th>
+                    <th scope="col">${JSON.parse(booking.guide).name}</th>
+                    <th scope="col">${booking.travel}</th>
+                    <th scope="col">${booking.date}</th>
+                    <th scope="col">${booking.time}</th>
+                    <th scope="col">${booking.paidValue}</th></tr>`);
+                }
+            });
     }
 
     isValid(customer) {

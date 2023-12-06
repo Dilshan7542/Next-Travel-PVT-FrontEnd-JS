@@ -3,7 +3,7 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class TravelAreaService{
     constructor() {
         this.travelAreaRepo=new RestApiRepo();
-        this.path="/travel/area";
+        this.path="/travel/api/v1/travel/area";
     }
     saveTravelArea(travelArea){
         return this.travelAreaRepo.save(this.path,travelArea);

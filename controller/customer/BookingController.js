@@ -23,9 +23,10 @@ this.bookingService = new BookingService();
         this.adult = Number($("#adultValue").text());
         this.children =Number( $("#childrenValue").text());
         this.room = Number($("#roomValue").text());
+        this.room +=this.room===0 ? 1:this.room;
         $(".fragment-07-mainSection>:first-child>:nth-child(1)>:last-child").text(this.adult);
         $(".fragment-07-mainSection>:first-child>:nth-child(2)>:last-child").text(this.children);
-        $(".fragment-07-mainSection>:first-child>:nth-child(3)>:last-child").text(this.room===0 ? 1:this.room);
+        $(".fragment-07-mainSection>:first-child>:nth-child(3)>:last-child").text(this.room);
 
         this.vehicle = JSON.parse(sessionStorage.getItem("selectedVehicle"));
         this.hotel = JSON.parse(sessionStorage.getItem("selectedHotel"));
@@ -81,7 +82,9 @@ this.bookingService = new BookingService();
     }
     paymentConformHandler(){
         let date=new Date().toISOString().split("T")[0]; //temporary
-        let time=new Date().getHours()+":"+ new Date().getMinutes();
+        let minutes=new Date().getMinutes()<10 ? "0"+new Date().getMinutes():new Date().getMinutes();
+        let hours=new Date().getHours()<10 ? "0"+new Date().getHours():new Date().getHours();
+        let time=hours+":"+ minutes;
         let customer =JSON.parse( localStorage.getItem("userDetails"));
         const travelCategory= JSON.parse(sessionStorage.getItem("travelCategory"));
         /*not completed*/
@@ -101,17 +104,18 @@ this.bookingService = new BookingService();
                 travelCategoryID: travelCategory.travelCategoryID
             },
         }
+        console.log(time);
         new TravelService().saveTravel(travel) // Save Travel
             .then(resp=>{
                 let booking={
                     date:date,
-                    time:time.length===4 ? 0+time:time,
+                    time:time,
                     paidValue:this.totalAmount,
                     paymentStatus:true,
-                    travelID:resp.body.travelID,
-                    hotelID:this.hotel.hotelID,
-                    vehicleID:this.vehicle.vehicleID,
-                    guideID:0, // Not Ready
+                    travel:sessionStorage.getItem("travelArea"),
+                    hotel:JSON.stringify(this.hotel),
+                    vehicle:JSON.stringify(this.vehicle),
+                    guide:0, // Not Ready
                     customer:customer
                 }
 
@@ -120,6 +124,7 @@ this.bookingService = new BookingService();
                     location.reload();
 
                 }).catch(e => {
+                    new TravelService().deleteTravel(resp.body.travelID);
                     alert("BOOKING FAILED");
 
                 });

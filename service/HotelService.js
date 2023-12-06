@@ -8,7 +8,7 @@ export class HotelService{
     constructor() {
         this.hotelRepo = new RestApiRepo();
         this.hotelMultipartRepo = new MultipartRepo();
-        this.path="/hotel";
+        this.path="/hotel/api/v1/hotel";
 
     }
     saveHotel(hotel){

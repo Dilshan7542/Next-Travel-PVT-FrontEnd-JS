@@ -3,7 +3,7 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class GuideService{
     constructor() {
         this.guideRepo=new RestApiRepo();
-        this.path="/guide";
+        this.path="/guide/api/v1/guide";
     }
     saveGuide(guide){
         return this.guideRepo.save(this.path,guide);

@@ -3,7 +3,7 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class UserService{
     constructor() {
         this.userRepo=new RestApiRepo();
-        this.path="/user";
+        this.path="/user/api/v1/user";
     }
     saveUser(user){
         return this.userRepo.save(this.path+"/register",user);

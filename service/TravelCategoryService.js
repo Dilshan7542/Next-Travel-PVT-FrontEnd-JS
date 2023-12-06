@@ -3,7 +3,7 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class TravelCategoryService {
     constructor() {
         this.travelCategoryRepo=new RestApiRepo();
-        this.path="/travel/category";
+        this.path="/travel/api/v1/travel/category";
     }
     saveTravelCategory(travelCategory){
         return this.travelCategoryRepo.save(this.path,travelCategory);

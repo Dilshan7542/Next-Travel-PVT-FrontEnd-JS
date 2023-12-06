@@ -16,6 +16,8 @@ export class AdminLoginController{
             localStorage.setItem("Authorization",resp.resp.getResponseHeader("Authorization"));
             $(location).prop("href","/next-travel-frontend/page/admin/console.html");
 
+        }).catch(e=>{
+            alert("Login Failed "+e);
         });
     }
 }

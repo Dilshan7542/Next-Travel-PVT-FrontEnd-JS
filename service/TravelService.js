@@ -3,10 +3,10 @@ import {RestApiRepo} from "../model/RestApiRepo.js";
 export class TravelService{
     constructor() {
         this.travelRepo=new RestApiRepo();
-        this.path="/travel";
+        this.path="/travel/api/v1/travel";
     }
     saveTravel(travel){
-        return this.travelRepo.save(this.path,travel);
+        return this.travelRepo.save(this.path+"/register",travel);
     }
 
     updateTravel(travel){

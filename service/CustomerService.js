@@ -7,7 +7,7 @@ export class CustomerService{
         this.customerRepo=new RestApiRepo();
         this.permitRepo = new PermitRepo();
         this.customerMultipartRepo = new MultipartRepo();
-        this.path="/customer";
+        this.path="/customer/api/v1/customer";
     }
     saveCustomer(customer){
         return this.permitRepo.saveCustomer(this.path+"/register",customer);
@@ -21,7 +21,7 @@ export class CustomerService{
         return this.customerRepo.search(this.path+"/search/email?email="+email);
     }
     searchBasicAuth(email,pwd){
-        return this.customerRepo.searchBasicAuth(this.path+"/search/email?email="+email,email,pwd);
+        return this.customerRepo.searchBasicAuth(this.path+"/search/email/"+email,email,pwd);
     }
     deleteCustomer(customerID){
         return this.customerRepo.delete(this.path+"/"+customerID);

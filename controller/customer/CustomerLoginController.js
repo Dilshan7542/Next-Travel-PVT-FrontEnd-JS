@@ -10,7 +10,7 @@ export class CustomerLoginController {
         $("#btnLogout").click(function () {
             localStorage.removeItem("Authorization");
             localStorage.removeItem("UserDetails");
-          location.reload();
+             location.reload();
         });
         this.customerService=new CustomerService();
     }
@@ -19,12 +19,14 @@ export class CustomerLoginController {
             let promise = this.customerService.searchBasicAuth($("#loginEmail").val(),$("#customerLoginPassword").val());
             promise.then(resp=>{
                 localStorage.setItem("userDetails",JSON.stringify(resp.body));
+                console.log(resp.body);
                 localStorage.setItem("Authorization",resp.resp.getResponseHeader("Authorization"));
                 $("#btnLogin").hide();
                 $("#btnSignup").hide();
                 $("#btnMyBooking").show();
                 $("#btnAccount").show();
                 $("#btnLogout").show();
+                location.reload();
 
             }).catch(e => { alert("Login Failed!!!  "+e.statusText);});
     }
